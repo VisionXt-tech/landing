@@ -1,0 +1,64 @@
+/* Fix styling for Vantaggi Competitivi section */
+.advantages-section,
+#market .bg-light {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Specific fix for the text and icons */
+#market .flex.items-start.mb-2,
+.advantage-item {
+    margin-bottom: 1.25rem !important;
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+#market .flex.items-start.mb-2 .material-icons,
+.advantage-icon {
+    color: #FF7A3D !important;
+    font-size: 24px !important;
+    margin-right: 12px !important;
+    margin-top: 2px !important;
+    flex-shrink: 0 !important;
+}
+
+#market .flex.items-start.mb-2 h4,
+.advantage-title {
+    color: #2A2A2A !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.3rem !important;
+}
+
+#market .flex.items-start.mb-2 p,
+.advantage-description {
+    color: #2A2A2A !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Forced contrast for all text in the market section */
+#market p,
+#market h3,
+#market h4,
+#market div,
+#market span {
+    color: #2A2A2A !important;
+}
+
+/* Exception for white text areas */
+#market .from-primary p,
+#market .from-primary h3,
+#market .from-primary h4,
+#market .from-primary div:not(.bg-white):not(.bg-white-opacity-20),
+#market .from-primary span {
+    color: white !important;
+}
+
+/* Special fix for the check icon */
+#market .material-icons.text-primary.mr-3.mt-1 {
+    color: #FF7A3D !important;
+    font-size: 24px !important;
+}
