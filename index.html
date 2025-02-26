@@ -23,6 +23,10 @@
     <!-- Particles.js for background animation -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -136,6 +140,35 @@
             left: 0;
             z-index: 0;
         }
+        
+        /* Floating animation for hero elements */
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        /* Sequence animation for staggered children */
+        .sequence-parent > * {
+            transition: all 0.5s ease;
+        }
+        
+        /* Ensure hero image is always visible */
+        #hero-image {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
     </style>
 </head>
 <body>
@@ -161,8 +194,31 @@
                 }
                 const html = await response.text();
                 document.getElementById(containerId).innerHTML = html;
+                
+                // Fix per hero image se stiamo caricando hero.html
+                if (containerId === 'hero-container') {
+                    setTimeout(fixHeroImage, 100);
+                }
             } catch (error) {
                 console.error(`Error loading component ${url}:`, error);
+            }
+        }
+        
+        // Funzione specifica per assicurarsi che l'immagine dell'hero sia visibile
+        function fixHeroImage() {
+            const heroImage = document.getElementById('hero-image');
+            if (heroImage) {
+                heroImage.style.display = 'block';
+                heroImage.style.opacity = '1';
+                heroImage.style.visibility = 'visible';
+                console.log('Hero image fixed');
+                
+                // Riapplica il fix dopo un po' per assicurarsi che rimanga visibile
+                setTimeout(() => {
+                    heroImage.style.display = 'block';
+                    heroImage.style.opacity = '1';
+                    heroImage.style.visibility = 'visible';
+                }, 1000);
             }
         }
 
@@ -181,10 +237,30 @@
             // Inizializza particles.js dopo aver caricato i componenti
             initializeParticles();
             
+            // Inizializza AOS per le animazioni allo scroll
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: false,
+                mirror: false,
+                offset: 50,
+                disable: 'mobile'  // Disabilita su mobile per migliori prestazioni
+            });
+            
+            // Fix aggiuntivo per l'immagine dell'hero dopo l'inizializzazione di AOS
+            setTimeout(fixHeroImage, 500);
+            
             // Inizializza eventuali altri script
             if (typeof initializeScripts === 'function') {
                 initializeScripts();
             }
+            
+            // Gestione eventi di scroll per assicurarsi che l'immagine dell'hero rimanga visibile
+            window.addEventListener('scroll', function() {
+                if (window.scrollY < 500) {  // Solo quando siamo vicini all'hero section
+                    fixHeroImage();
+                }
+            });
         });
         
         // Funzione per inizializzare particles.js

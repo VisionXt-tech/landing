@@ -1,89 +1,263 @@
-<!-- Customers Section -->
+<!-- Target Clientela Section -->
 <section id="customers" class="py-16 md:py-24 bg-light relative">
     <div class="container mx-auto px-4 md:px-6">
-        <div class="flex flex-col md:flex-row mb-16 items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
-                <h2 class="text-2xl md:text-4xl font-bold mb-4" data-aos="fade-up">
-                    I Nostri <span class="text-primary">Clienti</span>
-                </h2>
-                <p class="text-base md:text-lg text-gray-600 mb-6">
-                    VisionXt è pensato per servire diversi segmenti di mercato con esigenze specifiche.
-                </p>
+        <!-- Header con spiegazione più chiara -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4">
+                Il Nostro <span class="text-primary">Target di Clientela</span>
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+                VisionXt è progettato per rispondere alle esigenze specifiche di diverse categorie di utenti nel settore del design d'interni. 
+                Ecco chi può trarre maggior vantaggio dalla nostra soluzione.
+            </p>
+        </div>
+        
+        <!-- Layout moderno con tab interattive -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 mb-16" data-aos="fade-up" data-aos-delay="100">
+            <!-- Tab navigation -->
+            <div class="flex flex-wrap justify-center mb-10 tab-navigation">
+                <button class="tab-button active mx-2 mb-3 py-2 px-6 rounded-full bg-light-accent text-primary font-medium hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none" data-tab="market-segments">
+                    <span class="material-icons align-middle mr-1">segment</span>
+                    Segmenti di Mercato
+                </button>
+                <button class="tab-button mx-2 mb-3 py-2 px-6 rounded-full bg-light-accent text-primary font-medium hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none" data-tab="early-adopters">
+                    <span class="material-icons align-middle mr-1">person_outline</span>
+                    Early Adopters
+                </button>
+            </div>
+            
+            <!-- Tab content -->
+            <div class="tab-content">
+                <!-- Segmenti di Mercato tab -->
+                <div id="market-segments" class="tab-pane active">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        <!-- Categoria 1 -->
+                        <div class="market-segment-card bg-white p-6 rounded-xl border-l-4 border-blue-400 shadow-md transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 rounded-full bg-blue-50 mr-4">
+                                    <span class="material-icons text-blue-500">design_services</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-dark">Millennials Interior Designers</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Professionisti del design giovani e tecnologicamente preparati, sempre alla ricerca delle ultime tendenze.
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Tech-savvy, attenti alla qualità, con budget medio-basso</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Cercano personalizzazione e soluzioni innovative</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Valutano sostenibilità e usano molto i social media</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Categoria 2 -->
+                        <div class="market-segment-card bg-white p-6 rounded-xl border-l-4 border-green-400 shadow-md transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 rounded-full bg-green-50 mr-4">
+                                    <span class="material-icons text-green-500">business</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-dark">Imprenditori dell'Ospitalità</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Proprietari di boutique hotel, ristoranti e negozi al dettaglio che cercano soluzioni di design distintive.
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Cercano di differenziarsi dalla concorrenza</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Attenti al ROI e alla rapidità di esecuzione</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Necessitano di visualizzazione rapida dei progetti</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Categoria 3 -->
+                        <div class="market-segment-card bg-white p-6 rounded-xl border-l-4 border-purple-400 shadow-md transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="p-3 rounded-full bg-purple-50 mr-4">
+                                    <span class="material-icons text-purple-500">eco</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-dark">Professionisti Eco-Consapevoli</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Clienti attenti all'ambiente che cercano soluzioni d'arredo sostenibili senza compromettere la qualità.
+                            </p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Reddito medio-alto, sensibili all'ambiente</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Apprezzano qualità e durabilità dei prodotti</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-primary text-sm mr-2 mt-1">check_circle</span>
+                                    <p class="text-gray-600 text-sm">Ricercano informazioni sulla provenienza dei prodotti</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <span class="material-icons text-primary mr-3 mt-1">design_services</span>
-                        <div>
-                            <h4 class="font-bold">Millennials Interior Designers</h4>
-                            <p class="text-gray-600">Tech-savvy, attenti alla qualità, con budget medio-basso. Cercano personalizzazione, valutano sostenibilità e usano molto i social media.</p>
+                <!-- Early Adopters tab -->
+                <div id="early-adopters" class="tab-pane hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        <!-- Persona 1 -->
+                        <div class="early-adopter-card bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                            <div class="border-l-4 border-primary p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="adopter-avatar mr-4 bg-light-accent p-3 rounded-full flex items-center justify-center">
+                                        <span class="material-icons text-primary">brush</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">L'Arredatrice Creativa</h4>
+                                        <p class="text-sm text-gray-500">Chiara, 32 anni</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Graphic designer freelance che ristruttura una casa per un cliente. Si sente sopraffatta dalle scelte possibili ed ha poco tempo.
+                                </p>
+                                <div class="bg-light-accent p-3 rounded-lg">
+                                    <p class="text-primary font-medium flex items-center">
+                                        <span class="material-icons mr-2 text-sm">priority_high</span>
+                                        Vuole proporre qualità ma ha un budget limitato
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <span class="material-icons text-primary mr-3 mt-1">business</span>
-                        <div>
-                            <h4 class="font-bold">Imprenditori nel Settore dell'Ospitalità</h4>
-                            <p class="text-gray-600">Proprietari di boutique hotel, ristoranti e negozi al dettaglio. Cercano di differenziarsi dalla concorrenza, attenti al ROI, visualizzazione rapida dei progetti.</p>
+                        
+                        <!-- Persona 2 -->
+                        <div class="early-adopter-card bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                            <div class="border-l-4 border-primary p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="adopter-avatar mr-4 bg-light-accent p-3 rounded-full flex items-center justify-center">
+                                        <span class="material-icons text-primary">restaurant</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">L'Imprenditore Eco-Consapevole</h4>
+                                        <p class="text-sm text-gray-500">Marco, 35 anni</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Promettente Chef che sta arredando il suo nuovo ristorante. Cerca soluzioni sostenibili ma fatica a trovarne e ha poco tempo libero.
+                                </p>
+                                <div class="bg-light-accent p-3 rounded-lg">
+                                    <p class="text-primary font-medium flex items-center">
+                                        <span class="material-icons mr-2 text-sm">priority_high</span>
+                                        Disposto a spendere di più per qualità e durabilità
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <span class="material-icons text-primary mr-3 mt-1">eco</span>
-                        <div>
-                            <h4 class="font-bold">Professionisti Eco-Consapevoli</h4>
-                            <p class="text-gray-600">Reddito medio-alto, sensibili all'ambiente, apprezzano qualità e durabilità. Ricercano informazioni approfondite sulla provenienza dei prodotti.</p>
+                        
+                        <!-- Persona 3 -->
+                        <div class="early-adopter-card bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                            <div class="border-l-4 border-primary p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="adopter-avatar mr-4 bg-light-accent p-3 rounded-full flex items-center justify-center">
+                                        <span class="material-icons text-primary">home</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg">La Coppia Indecisa</h4>
+                                        <p class="text-sm text-gray-500">Elena e Paolo, 28 e 30 anni</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Giovani professionisti che convivono. Vogliono personalizzare il loro appartamento in affitto ma hanno gusti diversi e faticano a trovare un compromesso.
+                                </p>
+                                <div class="bg-light-accent p-3 rounded-lg">
+                                    <p class="text-primary font-medium flex items-center">
+                                        <span class="material-icons mr-2 text-sm">priority_high</span>
+                                        Cercano soluzioni flessibili, multifunzionali ed economiche
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <!-- Statistiche di mercato -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10" data-aos="fade-up">
+            <h3 class="text-xl md:text-2xl font-bold mb-8 text-center">
+                Dimensioni del Mercato <span class="text-primary">Target</span>
+            </h3>
             
-            <div class="md:w-1/2" data-aos="fade-left">
-                <h3 class="text-2xl font-bold mb-6 text-dark">Early Adopters</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="market-stat-card bg-light p-6 rounded-xl text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                    <div class="mb-4 text-primary">
+                        <span class="material-icons" style="font-size: 48px;">public</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">134 Miliardi €</h4>
+                    <p class="text-gray-600 text-sm">Mercato globale del design d'interni</p>
+                </div>
                 
-                <div class="space-y-6">
-                    <div class="adopter-profile" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center mb-4">
-                            <div class="adopter-avatar mr-4">
-                                <span class="material-icons text-primary">brush</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold">L'Arredatrice Creativa Stressata</h4>
-                                <p class="text-sm text-gray-500">Chiara, 32 anni</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-3">Graphic designer freelance che ristruttura una casa per un cliente. Si sente sopraffatta dalle scelte possibili ed ha poco tempo.</p>
-                        <p class="text-primary font-medium">Vuole proporre qualità ma ha un budget limitato.</p>
+                <div class="market-stat-card bg-light p-6 rounded-xl text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                    <div class="mb-4 text-primary">
+                        <span class="material-icons" style="font-size: 48px;">location_on</span>
                     </div>
-                    
-                    <div class="adopter-profile" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center mb-4">
-                            <div class="adopter-avatar mr-4">
-                                <span class="material-icons text-primary">restaurant</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold">L'Imprenditore Eco-Consapevole</h4>
-                                <p class="text-sm text-gray-500">Marco, 35 anni</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-3">Promettente Chef che sta arredando il suo nuovo ristorante. Cerca soluzioni sostenibili ma fatica a trovarne e ha poco tempo libero.</p>
-                        <p class="text-primary font-medium">Disposto a spendere di più per qualità e durabilità.</p>
+                    <h4 class="text-xl font-bold mb-2">2 Miliardi €</h4>
+                    <p class="text-gray-600 text-sm">Mercato target nazionale</p>
+                </div>
+                
+                <div class="market-stat-card bg-light p-6 rounded-xl text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                    <div class="mb-4 text-primary">
+                        <span class="material-icons" style="font-size: 48px;">trending_up</span>
                     </div>
-                    
-                    <div class="adopter-profile" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center mb-4">
-                            <div class="adopter-avatar mr-4">
-                                <span class="material-icons text-primary">home</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold">La Coppia Indecisa</h4>
-                                <p class="text-sm text-gray-500">Elena e Paolo, 28 e 30 anni</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-3">Giovani professionisti che convivono. Vogliono personalizzare il loro appartamento in affitto ma hanno gusti diversi.</p>
-                        <p class="text-primary font-medium">Cercano soluzioni flessibili, multifunzionali ed economiche.</p>
-                    </div>
+                    <h4 class="text-xl font-bold mb-2">+15% CAGR</h4>
+                    <p class="text-gray-600 text-sm">Crescita annuale prevista</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Script per il funzionamento delle tab -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Rimuovi la classe active da tutti i bottoni
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Aggiorna lo stile del bottone attivo
+                tabButtons.forEach(btn => {
+                    if (btn.classList.contains('active')) {
+                        btn.classList.remove('bg-light-accent', 'text-primary');
+                        btn.classList.add('bg-primary', 'text-white');
+                    } else {
+                        btn.classList.remove('bg-primary', 'text-white');
+                        btn.classList.add('bg-light-accent', 'text-primary');
+                    }
+                });
+                
+                // Nascondi tutti i tab panes
+                tabPanes.forEach(pane => pane.classList.add('hidden'));
+                
+                // Mostra il tab pane corrispondente
+                const tabName = this.getAttribute('data-tab');
+                document.getElementById(tabName).classList.remove('hidden');
+            });
+        });
+    });
+</script>
