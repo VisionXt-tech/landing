@@ -110,6 +110,11 @@
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             height: 100%;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: relative !important; 
+            z-index: 10 !important;
         }
         
         .metric-card {
@@ -119,6 +124,11 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             height: 100%;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: relative !important;
+            z-index: 10 !important;
         }
         
         .metric-card:hover {
@@ -169,6 +179,51 @@
             opacity: 1 !important;
             visibility: visible !important;
         }
+        
+        /* Style for tab interface */
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active {
+            background-color: var(--primary) !important;
+            color: white !important;
+        }
+        
+        .tab-pane {
+            display: block;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        
+        .tab-pane.hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        /* FIX CRITICI PER BUSINESS SECTION */
+        #business h3 {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: relative !important;
+            z-index: 10 !important;
+        }
+
+        #business .grid {
+            display: grid !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        #business .bg-white p, 
+        #business .bg-light p,
+        #business .text-gray-600, 
+        #business .text-gray-700,
+        #business .text-sm {
+            color: #333333 !important;
+            font-weight: 400 !important;
+        }
     </style>
 </head>
 <body>
@@ -199,8 +254,130 @@
                 if (containerId === 'hero-container') {
                     setTimeout(fixHeroImage, 100);
                 }
+                
+                // Fix per business section se stiamo caricando business.html
+                if (containerId === 'business-container') {
+                    setTimeout(fixBusinessSection, 100);
+                    setTimeout(fixBusinessSection, 500);
+                    setTimeout(fixBusinessSection, 1000);
+                }
+                
+                // Notifica che un componente è stato caricato
+                window.dispatchEvent(new CustomEvent('componentLoaded', {
+                    detail: {
+                        id: containerId,
+                        url: url
+                    }
+                }));
             } catch (error) {
                 console.error(`Error loading component ${url}:`, error);
+            }
+        }
+        
+        // Funzione per correggere la visualizzazione della sezione business
+        function fixBusinessSection() {
+            console.log("Fixing business section...");
+            
+            // Assicura visibilità per i contenitori principali
+            const businessContainer = document.getElementById('business-container');
+            if (businessContainer) {
+                businessContainer.style.display = 'block';
+                businessContainer.style.visibility = 'visible';
+                businessContainer.style.opacity = '1';
+            }
+            
+            // Flussi di Ricavo Multi-Canale
+            const revenueCards = document.querySelectorAll('#business .revenue-card');
+            if (revenueCards.length > 0) {
+                console.log("Found revenue cards:", revenueCards.length);
+                revenueCards.forEach((card, index) => {
+                    card.style.display = 'block';
+                    card.style.visibility = 'visible';
+                    card.style.opacity = '1';
+                    card.style.position = 'relative';
+                    card.style.zIndex = '10';
+                    
+                    // Rimuovi attributi AOS che potrebbero interferire
+                    card.removeAttribute('data-aos');
+                    card.removeAttribute('data-aos-delay');
+                    card.removeAttribute('data-aos-duration');
+                    
+                    // Assicura che tutti i contenuti all'interno della card siano visibili
+                    const elements = card.querySelectorAll('*');
+                    elements.forEach(el => {
+                        el.style.display = '';
+                        el.style.visibility = 'visible';
+                        el.style.opacity = '1';
+                        
+                        // Rimuovi attributi AOS che potrebbero interferire
+                        el.removeAttribute('data-aos');
+                        el.removeAttribute('data-aos-delay');
+                        el.removeAttribute('data-aos-duration');
+                    });
+                });
+            }
+            
+            // Metriche Chiave e Obiettivi
+            const metricCards = document.querySelectorAll('#business .metric-card');
+            if (metricCards.length > 0) {
+                console.log("Found metric cards:", metricCards.length);
+                metricCards.forEach((card, index) => {
+                    card.style.display = 'block';
+                    card.style.visibility = 'visible';
+                    card.style.opacity = '1';
+                    card.style.position = 'relative';
+                    card.style.zIndex = '10';
+                    
+                    // Rimuovi attributi AOS che potrebbero interferire
+                    card.removeAttribute('data-aos');
+                    card.removeAttribute('data-aos-delay');
+                    card.removeAttribute('data-aos-duration');
+                    
+                    // Assicura che tutti i contenuti all'interno della card siano visibili
+                    const elements = card.querySelectorAll('*');
+                    elements.forEach(el => {
+                        el.style.display = '';
+                        el.style.visibility = 'visible';
+                        el.style.opacity = '1';
+                        
+                        // Rimuovi attributi AOS che potrebbero interferire
+                        el.removeAttribute('data-aos');
+                        el.removeAttribute('data-aos-delay');
+                        el.removeAttribute('data-aos-duration');
+                    });
+                });
+            }
+            
+            // Titoli e contenitori di sezione
+            const businessSection = document.querySelector('#business');
+            if (businessSection) {
+                businessSection.style.overflow = 'visible';
+                
+                // Forza la visibilità di tutti i titoli
+                const titles = businessSection.querySelectorAll('h2, h3, h4');
+                titles.forEach(title => {
+                    title.style.display = 'block';
+                    title.style.visibility = 'visible';
+                    title.style.opacity = '1';
+                    title.style.position = 'relative';
+                    title.style.zIndex = '10';
+                    
+                    // Rimuovi attributi AOS che potrebbero interferire
+                    title.removeAttribute('data-aos');
+                    title.removeAttribute('data-aos-delay');
+                    title.removeAttribute('data-aos-duration');
+                });
+                
+                // Forza la visibilità di grid e container
+                const containers = businessSection.querySelectorAll('.container, .grid');
+                containers.forEach(container => {
+                    container.style.display = 'block';
+                    container.style.visibility = 'visible';
+                    container.style.opacity = '1';
+                    container.style.overflow = 'visible';
+                    container.style.position = 'relative';
+                    container.style.zIndex = '10';
+                });
             }
         }
         
@@ -250,6 +427,11 @@
             // Fix aggiuntivo per l'immagine dell'hero dopo l'inizializzazione di AOS
             setTimeout(fixHeroImage, 500);
             
+            // Fix aggiuntivo per la sezione business dopo l'inizializzazione di AOS
+            setTimeout(fixBusinessSection, 500);
+            setTimeout(fixBusinessSection, 1000);
+            setTimeout(fixBusinessSection, 2000);
+            
             // Inizializza eventuali altri script
             if (typeof initializeScripts === 'function') {
                 initializeScripts();
@@ -260,6 +442,9 @@
                 if (window.scrollY < 500) {  // Solo quando siamo vicini all'hero section
                     fixHeroImage();
                 }
+                
+                // Assicura la visibilità della sezione business durante lo scroll
+                fixBusinessSection();
             });
         });
         
@@ -380,5 +565,7 @@
     
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/business-fix.js"></script>
 </body>
 </html>

@@ -79,6 +79,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Fix per le intestazioni delle sezioni
+    function ensureSectionHeadersVisibility() {
+        // Fix specifico per l'intestazione della sezione clientela
+        const customerHeader = document.querySelector('#customers .text-center.mb-16');
+        if (customerHeader) {
+            customerHeader.style.display = 'block';
+            customerHeader.style.visibility = 'visible';
+            customerHeader.style.opacity = '1';
+            
+            const headerElements = customerHeader.querySelectorAll('h2, p, span');
+            headerElements.forEach(el => {
+                el.style.display = 'block';
+                el.style.visibility = 'visible';
+                el.style.opacity = '1';
+            });
+            
+            // Rimuovi attributi AOS che potrebbero interferire
+            customerHeader.removeAttribute('data-aos');
+            customerHeader.removeAttribute('data-aos-delay');
+            
+            console.log('Customer header visibility enforced');
+        }
+        
+        // Fix generale per tutte le intestazioni di sezione
+        document.querySelectorAll('section > .container > .text-center').forEach(header => {
+            header.style.display = 'block';
+            header.style.visibility = 'visible';
+            header.style.opacity = '1';
+            
+            const elements = header.querySelectorAll('h2, h3, p, span');
+            elements.forEach(el => {
+                el.style.display = 'block';
+                el.style.visibility = 'visible';
+                el.style.opacity = '1';
+            });
+        });
+    }
+    
     // Chiamalo subito
     ensureHeroImageVisibility();
     
@@ -87,12 +125,20 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(ensureHeroImageVisibility, 500);
     setTimeout(ensureHeroImageVisibility, 1000);
     
+    // Applica fix per le intestazioni delle sezioni dopo un breve ritardo
+    setTimeout(ensureSectionHeadersVisibility, 300);
+    setTimeout(ensureSectionHeadersVisibility, 1000);
+    setTimeout(ensureSectionHeadersVisibility, 2000);
+    
     // Initialize function called after all components are loaded
     window.initializeScripts = function() {
         console.log('All components loaded, initializing scripts...');
         
         // Assicuriamoci che l'immagine hero sia visibile
         ensureHeroImageVisibility();
+        
+        // Assicuriamoci che le intestazioni delle sezioni siano visibili
+        ensureSectionHeadersVisibility();
         
         // Preparazione degli elementi per le animazioni AOS
         prepareAnimations();
@@ -102,8 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (typeof AOS !== 'undefined') {
                 AOS.refresh();
                 
-                // Dopo il refresh di AOS, riapplica il fix per l'immagine hero
+                // Dopo il refresh di AOS, riapplica i fix
                 ensureHeroImageVisibility();
+                ensureSectionHeadersVisibility();
             }
         }, 100);
         
@@ -247,5 +294,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', function() {
         // Controlla e ripara l'immagine hero
         ensureHeroImageVisibility();
+        
+        // Controlla e ripara le intestazioni delle sezioni
+        ensureSectionHeadersVisibility();
     });
 });

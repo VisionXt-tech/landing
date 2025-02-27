@@ -1,34 +1,38 @@
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-section bg-white">
-    <div id="particles-js"></div>
+<section class="hero-section relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+    <div id="particles-js" class="particles-container absolute top-0 left-0 w-full h-full"></div>
+    
     <div class="container mx-auto px-4 md:px-6 py-8 md:py-16 relative z-10">
         <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
-                <div class="text-xs md:text-sm font-bold text-primary uppercase tracking-wider mb-2">INNOVAZIONE BASATA SULL'IA</div>
+                
                 <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-                    <span class="text-dark">Il</span> <span style="background: linear-gradient(90deg, #FF7A3D 0%, #80CBC4 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Ponte Magico</span> <span class="text-dark">tra Ispirazione e Realizzazione</span>
+                    <span class="text-dark">Dalla Visione alla Realtà:</span>
+                    <span style="background: linear-gradient(90deg, #FF7A3D 0%, #80CBC4 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"> Arreda con l'AI</span>
                 </h1>
-                <p class="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
-                    VisionXt è l'anello mancante tra ispirazione digitale e realizzazione nel design d'interni. Fonde l'intelligenza artificiale con l'expertise umana per democratizzare l'interior design, connettendo consumatori, prodotti locali e tendenze in un ecosistema sostenibile e accessibile.
+                <div class="text-xs md:text-sm font-bold text-primary uppercase tracking-wider mb-2">carica, Scopri, Arreda: Design in un Click</div>
+                <p class="text-base md:text-lg text-gray-600 mb-4 md:mb-5">
+                    VisionXt trasforma il modo di arredare: carica una foto di un ambiente che ti ispira e la nostra AI identifica mobili e arredi simili disponibili presso fornitori locali in tempo reale.
                 </p>
+                <div class="bg-light-accent p-4 rounded-lg mb-6 md:mb-8">
+                    <p class="text-sm md:text-base font-medium text-dark">
+                        <span class="text-primary font-bold">✓</span> Dedica più tempo alla creatività e meno alla ricerca di prodotti
+                        <br><span class="text-primary font-bold">✓</span> E-commerce in crescita: +14% nel 2022 (3,9 miliardi €)
+                        <br><span class="text-primary font-bold">✓</span> Risparmia fino al 75% del tempo nella ricerca di arredi e fornitori
+                    </p>
+                </div>
                 <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
                     <a href="#solution" class="btn-primary py-2 md:py-3 px-6 md:px-8 rounded-full font-medium text-center shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
-                        Scopri la Nostra Soluzione
+                        Scopri Come Funziona
                     </a>
                     <a href="#contact" class="btn-secondary py-2 md:py-3 px-6 md:px-8 rounded-full font-medium text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
-                        Investi nell'Innovazione
+                        Richiedi una Demo
                     </a>
                 </div>
             </div>
-            
             <!-- Hero Image (implementazione statica senza animazioni) -->
-            <div class="md:w-1/2 hero-image-container">
-                <div style="position: relative; z-index: 10;">
-                    <!-- Immagine statica inclusa direttamente nell'HTML -->
-                    <!-- Utilizzo inline style per garantire che si veda sempre -->
-                    <img id="hero-image" src="static\images\gif_landing.gif" alt="Piattaforma di design basata su IA" 
-                        style="display: block; width: 100%; height: auto; opacity: 1; visibility: visible;">
-                </div>
+            <div class="md:w-1/2 hero-image-container" style="display: block !important; opacity: 1 !important; visibility: visible !important;">
+                <img id="hero-image" src="static/images/gif_landing.gif" alt="Riconoscimento arredi con AI" style="display: block !important; opacity: 1 !important; visibility: visible !important; width: 100%; height: auto;">
             </div>
         </div>
         <div class="absolute bottom-4 md:bottom-10 left-1/2 transform -translate-x-1/2 scroll-down hidden md:block">
@@ -36,3 +40,121 @@
         </div>
     </div>
 </section>
+
+<!-- Includi particles.js tramite CDN -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<!-- Configura e inizializza particles.js -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    particlesJS('particles-js', {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#FF7A3D"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#FF7A3D",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 4,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 6000,
+                    "rotateY": 6000
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+});
+</script>

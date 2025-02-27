@@ -152,6 +152,104 @@
     line-height: 1.5;
 }
 
+/* Stili per la sezione dei clienti target */
+.tab-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tab-button:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--primary);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.tab-button:hover:before {
+    height: 100%;
+}
+
+.tab-button.active {
+    background-color: var(--primary) !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(255, 122, 61, 0.3);
+}
+
+.market-segment-card {
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.market-segment-card:hover {
+    border-left-width: 8px;
+}
+
+.early-adopter-card {
+    height: 100%;
+}
+
+.early-adopter-card .bg-light-accent {
+    transition: all 0.3s ease;
+}
+
+.early-adopter-card:hover .bg-light-accent {
+    background-color: var(--primary);
+}
+
+.early-adopter-card:hover .bg-light-accent p {
+    color: white !important;
+}
+
+.early-adopter-card:hover .bg-light-accent .material-icons {
+    color: white;
+}
+
+.market-stat-card {
+    transition: all 0.3s ease;
+}
+
+.market-stat-card:hover {
+    background-color: var(--light-accent);
+}
+
+.market-stat-card .material-icons {
+    transition: transform 0.5s ease;
+}
+
+.market-stat-card:hover .material-icons {
+    transform: scale(1.2);
+}
+
+.tab-navigation {
+    position: relative;
+}
+
+.tab-pane {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.tab-pane.active {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Animazioni per hover effects sulle card */
 .card-hover-effect {
     transition: all 0.3s ease;
@@ -269,15 +367,6 @@
 /* Fade-in animation for immediate visual elements */
 .fade-in {
     animation: fadeIn 1.2s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* Slide-in animation variants */
@@ -546,6 +635,18 @@
     .pain-point-card,
     .alternative-card {
         margin-bottom: 20px;
+    }
+    
+    /* Adattamenti per sezione clienti su mobile */
+    .tab-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .market-segment-card,
+    .early-adopter-card,
+    .market-stat-card {
+        margin-bottom: 16px;
     }
 }
 

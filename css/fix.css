@@ -186,6 +186,34 @@ img {
     z-index: -1;
 }
 
+/* ====== FIX PER INTESTAZIONI DELLE SEZIONI ====== */
+section h2,
+section h3,
+section p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Fix specifico per la sezione Target Clientela */
+#customers .text-center.mb-16,
+#customers .text-center.mb-16 h2,
+#customers .text-center.mb-16 p,
+#customers .text-center.mb-16 span {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Disattiva alcune animazioni AOS che potrebbero causare problemi */
+#customers [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
 @media (max-width: 768px) {
     .hero-image-container {
         margin-top: 2rem;
@@ -232,6 +260,17 @@ img {
     
     .process-content p {
         font-size: 0.9rem;
+    }
+    
+    /* Assicurati che le intestazioni siano visibili su mobile */
+    section h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    section h2 + p {
+        margin-bottom: 1.5rem !important;
     }
 }
 

@@ -1,22 +1,21 @@
 <!-- Target Clientela Section -->
 <section id="customers" class="py-16 md:py-24 bg-light relative">
-    <div class="container mx-auto px-4 md:px-6">
+    <div class="container mx-auto px-4 md:px-6" style="opacity: 1 !important; visibility: visible !important;">
         <!-- Header con spiegazione più chiara -->
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-2xl md:text-4xl font-bold mb-4">
+        <div class="text-center mb-16" style="display: block !important; opacity: 1 !important; visibility: visible !important;">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4" style="display: block !important; opacity: 1 !important; visibility: visible !important;">
                 Il Nostro <span class="text-primary">Target di Clientela</span>
             </h2>
-            <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-                VisionXt è progettato per rispondere alle esigenze specifiche di diverse categorie di utenti nel settore del design d'interni. 
-                Ecco chi può trarre maggior vantaggio dalla nostra soluzione.
+            <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto" style="display: block !important; opacity: 1 !important; visibility: visible !important;">
+                VisionXt risponde alle esigenze concrete di diverse categorie di utenti nel settore arredamento, con un potenziale mercato target di 2 miliardi di euro a livello nazionale.
             </p>
         </div>
         
         <!-- Layout moderno con tab interattive -->
-        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 mb-16" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 mb-16">
             <!-- Tab navigation -->
             <div class="flex flex-wrap justify-center mb-10 tab-navigation">
-                <button class="tab-button active mx-2 mb-3 py-2 px-6 rounded-full bg-light-accent text-primary font-medium hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none" data-tab="market-segments">
+                <button class="tab-button active mx-2 mb-3 py-2 px-6 rounded-full bg-primary text-white font-medium transition-all duration-300 focus:outline-none" data-tab="market-segments">
                     <span class="material-icons align-middle mr-1">segment</span>
                     Segmenti di Mercato
                 </button>
@@ -193,7 +192,7 @@
             </div>
         </div>
         
-        <!-- Statistiche di mercato -->
+        <!-- Statistiche di mercato aggiornate dalla ricerca -->
         <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10" data-aos="fade-up">
             <h3 class="text-xl md:text-2xl font-bold mb-8 text-center">
                 Dimensioni del Mercato <span class="text-primary">Target</span>
@@ -224,40 +223,54 @@
                     <p class="text-gray-600 text-sm">Crescita annuale prevista</p>
                 </div>
             </div>
+            
+            <!-- Insight sul comportamento degli utenti -->
+            <div class="mt-8 p-6 bg-light-accent rounded-lg">
+                <h4 class="text-lg font-bold mb-4 text-dark">Comportamento degli utenti: omnicanale</h4>
+                <p class="text-gray-700 mb-4">
+                    <span class="font-semibold">33 milioni</span> di consumatori in Italia integrano touchpoint digitali nel loro percorso di acquisto, anche se poi comprano in negozio. 1 cliente su 4 dichiara di aver acquistato sia online che offline dallo stesso rivenditore.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <p class="text-primary font-bold text-lg mb-1">72%</p>
+                        <p class="text-gray-600 text-sm">degli acquirenti usa lo smartphone per esplorare soluzioni</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <p class="text-primary font-bold text-lg mb-1">41%</p>
+                        <p class="text-gray-600 text-sm">utilizza i social per fare acquisti di arredamento</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg text-center">
+                        <p class="text-primary font-bold text-lg mb-1">52%</p>
+                        <p class="text-gray-600 text-sm">è più interessato alla realtà aumentata dopo il Covid</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Script per il funzionamento delle tab -->
+<!-- Script per garantire la visibilità dell'intestazione -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabPanes = document.querySelectorAll('.tab-pane');
-        
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Rimuovi la classe active da tutti i bottoni
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Aggiorna lo stile del bottone attivo
-                tabButtons.forEach(btn => {
-                    if (btn.classList.contains('active')) {
-                        btn.classList.remove('bg-light-accent', 'text-primary');
-                        btn.classList.add('bg-primary', 'text-white');
-                    } else {
-                        btn.classList.remove('bg-primary', 'text-white');
-                        btn.classList.add('bg-light-accent', 'text-primary');
-                    }
-                });
-                
-                // Nascondi tutti i tab panes
-                tabPanes.forEach(pane => pane.classList.add('hidden'));
-                
-                // Mostra il tab pane corrispondente
-                const tabName = this.getAttribute('data-tab');
-                document.getElementById(tabName).classList.remove('hidden');
+document.addEventListener('DOMContentLoaded', function() {
+    // Aspetta un attimo per assicurarsi che tutto sia caricato
+    setTimeout(function() {
+        // Forza la visibilità dell'header della sezione clientela
+        const customerHeader = document.querySelector('#customers .text-center.mb-16');
+        if (customerHeader) {
+            customerHeader.style.opacity = '1';
+            customerHeader.style.visibility = 'visible';
+            customerHeader.style.display = 'block';
+            
+            // Forza anche sugli elementi figli
+            const headerElements = customerHeader.querySelectorAll('h2, p, span');
+            headerElements.forEach(el => {
+                el.style.opacity = '1';
+                el.style.visibility = 'visible';
+                el.style.display = 'block';
             });
-        });
-    });
+            
+            console.log('Forced visibility on customer header');
+        }
+    }, 500);
+});
 </script>
