@@ -11,83 +11,85 @@
             </p>
         </div>
         
-        <!-- Cascade Layout per le card vantaggi -->
-        <div class="cascade-container max-w-5xl mx-auto relative mb-24">
-            <!-- Vantaggio 1 -->
-            <div class="cascade-card card-left" data-aos="fade-right" data-aos-duration="800" data-aos-offset="200">
-                <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg relative z-10">
-                    <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
-                        <span class="material-icons text-primary text-xl">bolt</span>
+        <!-- Grid Layout per le card vantaggi (sostituito cascata con grid) -->
+        <div class="max-w-6xl mx-auto relative mb-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Vantaggio 1 -->
+                <div class="advantage-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg h-full">
+                        <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                            <span class="material-icons text-primary text-xl">bolt</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-dark">AI Superiore</h3>
+                        <p class="text-gray-600 text-sm">
+                            Computer Vision avanzata con precisione 95%. Identifica stile, materiali e finiture.
+                        </p>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 text-dark">AI Superiore</h3>
-                    <p class="text-gray-600 text-sm">
-                        Computer Vision avanzata con precisione 95%. Identifica stile, materiali e finiture.
-                    </p>
                 </div>
-            </div>
-            
-            <!-- Vantaggio 2 -->
-            <div class="cascade-card card-right" data-aos="fade-left" data-aos-duration="800" data-aos-offset="200" data-aos-delay="100">
-                <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg relative z-20">
-                    <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
-                        <span class="material-icons text-primary text-xl">group</span>
+                
+                <!-- Vantaggio 2 -->
+                <div class="advantage-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="150">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg h-full">
+                        <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                            <span class="material-icons text-primary text-xl">group</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-dark">Impatto Sociale</h3>
+                        <p class="text-gray-600 text-sm">
+                            Supporto all'economia e manifattura locale. Aiuta piccole realtà a competere digitalmente.
+                        </p>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 text-dark">Impatto Sociale</h3>
-                    <p class="text-gray-600 text-sm">
-                        Supporto all'economia e manifattura locale. Aiuta piccole realtà a competere digitalmente.
-                    </p>
                 </div>
-            </div>
-            
-            <!-- Vantaggio 3 -->
-            <div class="cascade-card card-left" data-aos="fade-right" data-aos-duration="800" data-aos-offset="200" data-aos-delay="200">
-                <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg relative z-30">
-                    <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
-                        <span class="material-icons text-primary text-xl">schedule</span>
+                
+                <!-- Vantaggio 3 -->
+                <div class="advantage-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg h-full">
+                        <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                            <span class="material-icons text-primary text-xl">schedule</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-dark">Risparmio di Tempo</h3>
+                        <p class="text-gray-600 text-sm">
+                            -75% tempo ricerca prodotti. Più spazio alla creatività, meno ricerca manuale.
+                        </p>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 text-dark">Risparmio di Tempo</h3>
-                    <p class="text-gray-600 text-sm">
-                        -75% tempo ricerca prodotti. Più spazio alla creatività, meno ricerca manuale.
-                    </p>
                 </div>
-            </div>
-            
-            <!-- Vantaggio 4 -->
-            <div class="cascade-card card-right" data-aos="fade-left" data-aos-duration="800" data-aos-offset="200" data-aos-delay="300">
-                <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg relative z-40">
-                    <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
-                        <span class="material-icons text-primary text-xl">eco</span>
+                
+                <!-- Vantaggio 4 -->
+                <div class="advantage-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="250">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg h-full">
+                        <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                            <span class="material-icons text-primary text-xl">eco</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-dark">Sostenibilità</h3>
+                        <p class="text-gray-600 text-sm">
+                            Minori distanze di trasporto, riduzione CO₂. Scelte eco-compatibili senza compromessi.
+                        </p>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 text-dark">Sostenibilità</h3>
-                    <p class="text-gray-600 text-sm">
-                        Minori distanze di trasporto, riduzione CO₂. Scelte eco-compatibili senza compromessi.
-                    </p>
                 </div>
-            </div>
-            
-            <!-- Vantaggio 5 -->
-            <div class="cascade-card card-left" data-aos="fade-right" data-aos-duration="800" data-aos-offset="200" data-aos-delay="400">
-                <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg relative z-50">
-                    <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
-                        <span class="material-icons text-primary text-xl">savings</span>
+                
+                <!-- Vantaggio 5 -->
+                <div class="advantage-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg h-full">
+                        <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                            <span class="material-icons text-primary text-xl">savings</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-dark">Costi Ottimizzati</h3>
+                        <p class="text-gray-600 text-sm">
+                            Risparmio su trasporti e marketing. Vantaggi economici per tutta la filiera.
+                        </p>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 text-dark">Costi Ottimizzati</h3>
-                    <p class="text-gray-600 text-sm">
-                        Risparmio su trasporti e marketing. Vantaggi economici per tutta la filiera.
-                    </p>
                 </div>
-            </div>
-            
-            <!-- Vantaggio 6 -->
-            <div class="cascade-card card-right" data-aos="fade-left" data-aos-duration="800" data-aos-offset="200" data-aos-delay="500">
-                <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg relative z-60">
-                    <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
-                        <span class="material-icons text-primary text-xl">handshake</span>
+                
+                <!-- Vantaggio 6 -->
+                <div class="advantage-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="350">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 transition-all hover:shadow-lg h-full">
+                        <div class="w-12 h-12 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                            <span class="material-icons text-primary text-xl">handshake</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-dark">Partnership</h3>
+                        <p class="text-gray-600 text-sm">
+                            Collaborazioni con studi di design e associazioni di categoria. Rete di valore integrata.
+                        </p>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2 text-dark">Partnership</h3>
-                    <p class="text-gray-600 text-sm">
-                        Collaborazioni con studi di design e associazioni di categoria. Rete di valore integrata.
-                    </p>
                 </div>
             </div>
         </div>
@@ -200,60 +202,25 @@
     overflow-y: hidden;
 }
 
-/* Layout a cascata */
-.cascade-container {
-    position: relative;
-    padding: 20px 0;
-}
-
-.cascade-card {
-    position: relative;
-    width: 280px;
-    max-width: 100%;
-    margin-bottom: 30px;
-}
-
-/* Posizionamento delle card */
-.card-left {
-    margin-left: 10%;
-}
-
-.card-right {
-    margin-left: auto;
-    margin-right: 10%;
-}
-
-/* Su schermi più piccoli */
-@media (max-width: 768px) {
-    .card-left {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .card-right {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.cascade-card > div {
+/* Stile per le card */
+.advantage-card > div {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
-.cascade-card:hover > div {
+.advantage-card:hover > div {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-color: var(--primary);
     transform: translateY(-5px);
 }
 
-/* Effects for cascade cards */
-.cascade-card:nth-child(1) > div { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06); }
-.cascade-card:nth-child(2) > div { box-shadow: 0 5px 8px rgba(0, 0, 0, 0.07); }
-.cascade-card:nth-child(3) > div { box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08); }
-.cascade-card:nth-child(4) > div { box-shadow: 0 7px 12px rgba(0, 0, 0, 0.09); }
-.cascade-card:nth-child(5) > div { box-shadow: 0 8px 14px rgba(0, 0, 0, 0.10); }
-.cascade-card:nth-child(6) > div { box-shadow: 0 9px 16px rgba(0, 0, 0, 0.11); }
+/* Effetti di profondità per le card */
+.advantage-card:nth-child(1) > div { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06); }
+.advantage-card:nth-child(2) > div { box-shadow: 0 5px 8px rgba(0, 0, 0, 0.07); }
+.advantage-card:nth-child(3) > div { box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08); }
+.advantage-card:nth-child(4) > div { box-shadow: 0 7px 12px rgba(0, 0, 0, 0.09); }
+.advantage-card:nth-child(5) > div { box-shadow: 0 8px 14px rgba(0, 0, 0, 0.10); }
+.advantage-card:nth-child(6) > div { box-shadow: 0 9px 16px rgba(0, 0, 0, 0.11); }
 
 /* Stile per la tabella di confronto */
 #advantages table th {
@@ -266,11 +233,6 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .cascade-card {
-        width: 90%;
-        max-width: 280px;
-    }
-    
     #advantages {
         padding-top: 4rem;
         padding-bottom: 4rem;
