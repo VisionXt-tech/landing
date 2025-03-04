@@ -1,0 +1,118 @@
+/* Fix per le sezioni Problems e Solutions */
+
+/* FIX PER LA SEZIONE PROBLEMS */
+#problem .grid > div {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+#problem .grid > div:hover {
+    transform: translateY(-5px);
+}
+
+.counter-value {
+    display: inline-block;
+    min-width: 2.5em;
+    text-align: center;
+}
+
+/* Miglioramenti estetici generali */
+#problem .material-icons.text-primary {
+    transition: transform 0.3s ease;
+}
+
+#problem .bg-white.p-6.rounded-xl:hover .material-icons.text-primary {
+    transform: scale(1.2);
+}
+
+/* Migliora la leggibilità dei testi */
+#problem p.text-gray-600 {
+    line-height: 1.6;
+}
+
+/* Evita che i checkmarks si spostino quando il testo va a capo */
+#problem .flex.items-start.text-gray-600 .material-icons.text-primary {
+    flex-shrink: 0;
+}
+
+/* FIX PER LA SEZIONE SOLUTIONS */
+#solution .rounded-full {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10 !important;
+    position: absolute !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#solution .rounded-full span {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: white !important;
+    font-weight: bold !important;
+    display: block !important;
+}
+
+#solution .relative .absolute.left-0.md\\:left-1\\/2 {
+    position: absolute !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 20 !important;
+}
+
+#solution .relative {
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    #solution .absolute.left-0.md\\:left-1\\/2 {
+        left: 12px !important;
+    }
+    #solution .md\\:w-1\/2 {
+        width: 100% !important;
+        margin-left: 1.5rem;
+    }
+    #solution .md\\:text-right {
+        text-align: left !important;
+    }
+}
+
+/* Miglioramenti estetici generali */
+#solution .material-icons.text-5xl.text-primary,
+#problem .material-icons.text-primary {
+    transition: transform 0.3s ease;
+}
+
+#solution .p-6.bg-white.rounded-lg:hover .material-icons.text-5xl.text-primary,
+#problem .bg-white.p-6.rounded-xl:hover .material-icons.text-primary {
+    transform: scale(1.2);
+}
+
+/* Migliora la leggibilità dei testi */
+#solution p.text-gray-600,
+#problem p.text-gray-600 {
+    line-height: 1.6;
+}
+
+/* Evita che i checkmarks si spostino quando il testo va a capo */
+#solution .flex.items-start.text-gray-600 .material-icons.text-primary,
+#problem .flex.items-start.text-gray-600 .material-icons.text-primary {
+    flex-shrink: 0;
+}
+
+/* Fix per margini e paddings inconsistenti */
+#solution .mb-16.md\\:mb-32,
+#solution .mb-16.md\\:mb-24 {
+    margin-bottom: 4rem !important;
+}
+
+@media (min-width: 768px) {
+    #solution .mb-16.md\\:mb-32,
+    #solution .mb-16.md\\:mb-24 {
+        margin-bottom: 6rem !important;
+    }
+}

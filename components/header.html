@@ -1,30 +1,101 @@
-<!-- Header -->
-<header class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
-    <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="text-2xl md:text-3xl font-bold">
-                    <span class="text-dark">Vision</span><span class="text-primary">X</span><span class="text-dark">t</span>
-                </div>
-            </div>
-            
-            <nav class="hidden md:flex space-x-10 desktop-menu">
-                <a href="#problem" class="nav-link text-dark hover:text-primary font-medium">Problema</a>
-                <a href="#solution" class="nav-link text-dark hover:text-primary font-medium">Soluzione</a>
-                <a href="#customers" class="nav-link text-dark hover:text-primary font-medium">Clienti</a>
-                <a href="#advantages" class="nav-link text-dark hover:text-primary font-medium">Vantaggi</a>
-                <a href="#business" class="nav-link text-dark hover:text-primary font-medium">Business</a>
-            </nav>
-            
-            <div class="hidden md:block">
-                <a href="#contact" class="btn-primary py-2 px-6 rounded-full font-medium shadow-lg">
-                    Contattaci
-                </a>
-            </div>
-            
-            <button class="mobile-menu-button md:hidden text-dark focus:outline-none" id="mobileMenuButton">
-                <span class="material-icons">menu</span>
-            </button>
-        </div>
+<!-- Header Section -->
+<header class="fixed top-0 left-0 bg-white w-full py-3 z-50 transition-all duration-300" id="main-header">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center text-dark">
+            <span class="font-bold text-2xl relative">
+                <span class="text-primary">Vision</span><span class="text-dark">Xt</span>
+            </span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="#hero" class="nav-link text-dark font-medium hover:text-primary transition-colors">Home</a>
+            <a href="#problem" class="nav-link text-dark font-medium hover:text-primary transition-colors">Problema</a>
+            <a href="#solution" class="nav-link text-dark font-medium hover:text-primary transition-colors">Soluzione</a>
+            <a href="#customers" class="nav-link text-dark font-medium hover:text-primary transition-colors">Target</a>
+            <a href="#advantages" class="nav-link text-dark font-medium hover:text-primary transition-colors">Vantaggi</a>
+            <a href="#business" class="nav-link text-dark font-medium hover:text-primary transition-colors">Business</a>
+            <a href="#contact" class="btn-primary py-2 px-5 rounded-full text-white font-medium hover:shadow-lg transition-all">Contattaci</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden flex items-center text-dark focus:outline-none" id="mobileMenuButton">
+            <span class="material-icons">menu</span>
+        </button>
     </div>
+    
+    <!-- Progress Bar for Scroll Indication -->
+    <div class="progress-bar absolute bottom-0 left-0 h-0.5 bg-primary z-10"></div>
 </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('main-header');
+    const progressBar = document.querySelector('.progress-bar');
+    const navLinks = document.querySelectorAll('header .nav-link');
+    
+    // Handle scroll events
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        
+        // Update header background on scroll
+        if (scrollPosition > 50) {
+            header.classList.add('bg-white', 'shadow-md', 'py-2');
+            header.classList.remove('py-3');
+        } else {
+            header.classList.remove('bg-white', 'shadow-md', 'py-2');
+            header.classList.add('py-3');
+        }
+        
+        // Update progress bar
+        if (progressBar) {
+            const scrollPercentage = (scrollPosition / windowHeight) * 100;
+            progressBar.style.width = `${scrollPercentage}%`;
+        }
+        
+        // Highlight active nav link based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary');
+                    
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('text-primary');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Handle mobile menu button click
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', function() {
+            const mobileMenuContainer = document.getElementById('mobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            
+            if (mobileMenuContainer && mobileMenuOverlay) {
+                mobileMenuContainer.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.classList.toggle('overflow-hidden');
+                
+                // Change icon based on menu state
+                const menuIcon = this.querySelector('.material-icons');
+                
+                if (menuIcon) {
+                    menuIcon.textContent = mobileMenuContainer.classList.contains('active') ? 'close' : 'menu';
+                }
+            }
+        });
+    }
+});
+</script>

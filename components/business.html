@@ -1,298 +1,347 @@
 <!-- Business Section -->
-<section id="business" class="py-16 md:py-24 bg-light">
-    <div class="container mx-auto px-4 md:px-6">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-2xl md:text-4xl font-bold mb-3 md:mb-4" data-aos="fade-up" style="opacity: 1 !important; visibility: visible !important;">
-                <span class="text-primary">Modello di Business</span> Sostenibile e Scalabile
+<section id="business" class="py-20 md:py-28 relative bg-white">
+    <div class="container mx-auto px-8 md:px-16">
+        <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="700">
+            <span class="inline-block text-xs font-medium text-primary mb-4">• MODELLO DI BUSINESS •</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-5 text-dark">
+                <span class="text-primary">Strategia di Monetizzazione</span>
             </h2>
-            <p class="text-base md:text-lg text-gray-800 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100" style="opacity: 1 !important; visibility: visible !important;">
-                Un approccio sostenibile e scalabile basato sulle reali tendenze del mercato dell'arredamento
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                VisionXt offre un modello di business sostenibile e scalabile, basato su flussi di ricavo multipli e partnership strategiche.
             </p>
         </div>
-
-        <!-- Dati di mercato rilevanti per il modello di business -->
-        <div class="bg-white rounded-xl shadow-lg p-8 mb-12" data-aos="fade-up" data-aos-delay="150" style="opacity: 1 !important; visibility: visible !important;">
-            <h3 class="text-xl font-bold mb-6 text-center">Il Mercato dell'Arredamento in Italia</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 flex items-center">
-                        <span class="material-icons text-primary mr-2">trending_up</span>
-                        Crescita Rapida dell'E-commerce
-                    </h4>
-                    <div class="bg-light p-4 rounded-lg">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-gray-800 font-medium">2019</span>
-                            <span class="text-gray-800 font-medium">1,7-2 miliardi €</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 40%"></div>
-                        </div>
-                        
-                        <div class="flex items-center justify-between mb-3 mt-6">
-                            <span class="text-gray-800 font-medium">2021</span>
-                            <span class="text-gray-800 font-medium">3,3 miliardi €</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
-                        </div>
-                        
-                        <div class="flex items-center justify-between mb-3 mt-6">
-                            <span class="text-gray-800 font-medium">2022</span>
-                            <span class="text-gray-800 font-medium">3,9 miliardi €</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+        
+        <!-- Revenue Distribution Chart Section -->
+        <div class="mb-24 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="700">
+            <h3 class="text-2xl font-bold mb-10 text-center text-dark">Distribuzione dei Flussi di Ricavo</h3>
+            
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-10">
+                <!-- Revenue Chart -->
+                <div class="w-full lg:w-2/5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-md h-full transition-all hover:shadow-lg hover:border-primary">
+                        <div class="chart-container" style="position: relative; height: 280px;">
+                            <canvas id="ricaviChart"></canvas>
                         </div>
                     </div>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 flex items-center">
-                        <span class="material-icons text-primary mr-2">insights</span>
-                        Potenziale di Crescita
-                    </h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start bg-light p-4 rounded-lg">
-                            <span class="material-icons text-primary mr-2 mt-0.5">check_circle</span>
-                            <div>
-                                <p class="font-medium text-gray-800">In Italia solo il 10-11% degli acquisti di arredo avviene online</p>
-                                <p class="text-gray-800 text-sm">Rispetto al 25% della Francia, indicando un grande potenziale di crescita</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-light p-4 rounded-lg">
-                            <span class="material-icons text-primary mr-2 mt-0.5">check_circle</span>
-                            <div>
-                                <p class="font-medium text-gray-800">+30,8% crescita e-commerce al Sud Italia nel 2022</p>
-                                <p class="text-gray-800 text-sm">5 volte superiore a quella del retail fisico, con potenziale enorme nelle regioni del Centro-Sud</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start bg-light p-4 rounded-lg">
-                            <span class="material-icons text-primary mr-2 mt-0.5">check_circle</span>
-                            <div>
-                                <p class="font-medium text-gray-800">+7% crescita prevista nel 2023-2024</p>
-                                <p class="text-gray-800 text-sm">Fase di consolidamento dopo il boom post-pandemia, ma ancora superiore alla media retail</p>
-                            </div>
-                        </li>
-                    </ul>
+                <!-- Revenue Cards -->
+                <div class="w-full lg:w-3/5" data-aos="fade-up" data-aos-delay="150">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Commissioni Card -->
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-primary hover:-translate-y-1">
+                            <h3 class="text-lg font-bold mb-2 text-primary">Commissioni</h3>
+                            <p class="text-3xl font-bold mb-2 text-dark">50%</p>
+                            <p class="text-gray-600">Commissioni del 10-15% sulle transazioni</p>
+                        </div>
+                        
+                        <!-- Abbonamenti Card -->
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-primary hover:-translate-y-1">
+                            <h3 class="text-lg font-bold mb-2 text-primary">Abbonamenti</h3>
+                            <p class="text-3xl font-bold mb-2 text-dark">30%</p>
+                            <p class="text-gray-600">Piani da 19€ a 99€ mensili</p>
+                        </div>
+                        
+                        <!-- Pubblicità Card -->
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-primary hover:-translate-y-1">
+                            <h3 class="text-lg font-bold mb-2 text-primary">Pubblicità</h3>
+                            <p class="text-3xl font-bold mb-2 text-dark">20%</p>
+                            <p class="text-gray-600">Sponsorizzazioni e banner pubblicitari</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- Revenue Streams -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-bold mb-8 text-center" data-aos="fade-up" style="opacity: 1 !important; visibility: visible !important;">Flussi di Ricavo Multi-Canale</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100" style="opacity: 1 !important; visibility: visible !important;">
-                <div class="revenue-card bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-primary rounded-full p-3 mr-3">
-                            <span class="material-icons text-white">card_membership</span>
-                        </div>
-                        <h4 class="font-bold text-xl">Modello Freemium</h4>
+        <!-- Revenue Models Section -->
+        <div class="mb-24 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="700">
+            <h3 class="text-2xl font-bold mb-10 text-center text-dark">Dettaglio Modelli di Ricavo</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Subscription Model -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">subscriptions</span>
                     </div>
-                    <ul class="space-y-3 mb-4">
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="text-gray-800">Basic (gratuito)</span>
-                            <span class="font-bold">0€</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="text-gray-800">Premium</span>
-                            <span class="font-bold text-primary">9,99€/mese</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="text-gray-800">Pro Designer</span>
-                            <span class="font-bold text-primary">29,99€/mese</span>
-                        </li>
-                    </ul>
-                    <p class="text-gray-800 mt-4 leading-relaxed">
-                        Come Houzz Pro (39€/mese in Italia), offriamo strumenti avanzati ai professionisti con accesso illimitato al sistema di analisi visuale.
+                    <h4 class="text-xl font-semibold mb-4 text-dark">Abbonamento Premium</h4>
+                    <p class="text-gray-600 mb-6">
+                        Diversi livelli di abbonamento mensile per professionisti del design e studi di architettura.
                     </p>
-                </div>
-                
-                <div class="revenue-card bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-primary rounded-full p-3 mr-3">
-                            <span class="material-icons text-white">shopping_basket</span>
-                        </div>
-                        <h4 class="font-bold text-xl">Commissioni Marketplace</h4>
-                    </div>
-                    <div class="mt-2">
+                    
+                    <div class="bg-gray-50 p-5 rounded-lg mb-5">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="text-gray-800">Transazioni standard</span>
-                            <span class="font-bold text-primary">10-15%</span>
+                            <span class="text-gray-700">Piano Free</span>
+                            <span class="text-primary font-bold">Gratuito</span>
                         </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2">
-                            <div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-700">Piano Pro</span>
+                            <span class="text-primary font-bold">€19/mese</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Piano Studio</span>
+                            <span class="text-primary font-bold">€49/mese</span>
                         </div>
                     </div>
-                    <p class="text-gray-800 mt-6 leading-relaxed">
-                        In linea con marketplace di arredamento come Amazon (15%) e ManoMano (15-25%), ma con valore aggiunto di vendite locali e riduzione dei costi logistici.
+                    
+                    <div class="text-gray-600">
+                        <p>Fatturato previsto: <span class="font-medium text-dark">30% del totale</span></p>
+                    </div>
+                </div>
+                
+                <!-- Commission Model -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">percent</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-dark">Commissione sulle Vendite</h4>
+                    <p class="text-gray-600 mb-6">
+                        Riceviamo una commissione per ogni transazione completata attraverso la nostra piattaforma.
                     </p>
+                    
+                    <div class="bg-gray-50 p-5 rounded-lg mb-5">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-700">Commissione Standard</span>
+                            <span class="text-primary font-bold">10-15%</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-700">Primo Acquisto</span>
+                            <span class="text-primary font-bold">15-20%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Prodotti Premium</span>
+                            <span class="text-primary font-bold">12-18%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-gray-600">
+                        <p>Fatturato previsto: <span class="font-medium text-dark">50% del totale</span></p>
+                    </div>
                 </div>
                 
-                <div class="revenue-card bg-white rounded-xl shadow-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-primary rounded-full p-3 mr-3">
-                            <span class="material-icons text-white">storefront</span>
-                        </div>
-                        <h4 class="font-bold text-xl">Servizi Premium a Negozi</h4>
+                <!-- Pubblicità Model -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">campaign</span>
                     </div>
-                    <ul class="space-y-3 mb-4">
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="text-gray-800">Pacchetto Base</span>
-                            <span class="font-bold text-primary">50€/mese</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="text-gray-800">Vetrina Premium</span>
-                            <span class="font-bold text-primary">150€/mese</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="text-gray-800">Sponsorizzazioni</span>
-                            <span class="font-bold text-primary">250-1000€/mese</span>
-                        </li>
-                    </ul>
-                    <p class="text-gray-800 mt-4 leading-relaxed">
-                        Fornitori locali pagano per visibilità prioritaria, analytics avanzate e integrazione catalogo. Zero commissioni per gli abbonati Premium.
+                    <h4 class="text-xl font-semibold mb-4 text-dark">Pubblicità e Sponsor</h4>
+                    <p class="text-gray-600 mb-6">
+                        Offriamo spazi pubblicitari, piani di sponsorizzazione prodotti, fee inserimento database per produttori e rivenditori.
                     </p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Key Metrics basati sul mercato reale -->
-        <div class="mb-12" data-aos="fade-up" data-aos-delay="150" style="opacity: 1 !important; visibility: visible !important;">
-            <h3 class="text-2xl font-bold mb-8 text-center">Metriche Chiave e Obiettivi</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="metric-card bg-white rounded-xl shadow-lg p-6">
-                    <div class="metric-icon text-center">
-                        <span class="material-icons">shopping_cart</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 text-center">Utenti e Conversioni</h4>
-                    <div class="space-y-2">
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">500 utenti professionali</p>
-                            <p class="text-sm text-gray-800">nei primi 6 mesi</p>
+                    
+                    <div class="bg-gray-50 p-5 rounded-lg mb-5">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-700">Banner</span>
+                            <span class="text-primary font-bold">€99-299/mese</span>
                         </div>
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">5-10% tasso di conversione</p>
-                            <p class="text-sm text-gray-800">da utenti gratuiti a premium</p>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-700">Prodotti in Evidenza</span>
+                            <span class="text-primary font-bold">€199/mese</span>
                         </div>
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">20-35€ ARPU</p>
-                            <p class="text-sm text-gray-800">ricavo medio per utente attivo</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Database</span>
+                            <span class="text-primary font-bold">€299 una tantum</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="metric-card bg-white rounded-xl shadow-lg p-6">
-                    <div class="metric-icon text-center">
-                        <span class="material-icons">handshake</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 text-center">Partnership e Supply</h4>
-                    <div class="space-y-2">
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">5 marketplace arredamento locali</p>
-                            <p class="text-sm text-gray-800">integrati nei primi 6 mesi</p>
-                        </div>
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">3+ associazioni di categoria</p>
-                            <p class="text-sm text-gray-800">partnership strategiche</p>
-                        </div>
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">60%+ vendite da fornitori locali</p>
-                            <p class="text-sm text-gray-800">per un autentico impatto sulla sostenibilità</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="metric-card bg-white rounded-xl shadow-lg p-6">
-                    <div class="metric-icon text-center">
-                        <span class="material-icons">trending_up</span>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3 text-center">Obiettivi Finanziari</h4>
-                    <div class="space-y-2">
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">€150.000 fatturato</p>
-                            <p class="text-sm text-gray-800">primo anno operativo</p>
-                        </div>
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">Break-even entro 3 anni</p>
-                            <p class="text-sm text-gray-800">in linea con startup del settore</p>
-                        </div>
-                        <div class="bg-white border border-gray-200 p-3 rounded-lg">
-                            <p class="font-medium mb-1 text-gray-800">Crescita 30-40% post break-even</p>
-                            <p class="text-sm text-gray-800">sfruttando l'effetto rete</p>
-                        </div>
+                    
+                    <div class="text-gray-600">
+                        <p>Fatturato previsto: <span class="font-medium text-dark">20% del totale</span></p>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Investment CTA with research-based numbers -->
-        <div class="bg-primary text-white rounded-2xl p-8 md:p-10 shadow-xl" data-aos="fade-up" data-aos-delay="200" style="opacity: 1 !important; visibility: visible !important;">
-            <div class="text-center mb-8 md:mb-10">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4">Investi nell'Innovazione Italiana</h3>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto">
-                    Con un CAC stimato tra i 20-50€ per cliente e un ARPU di 20-35€, offriamo un solido ritorno sull'investimento, puntando a un mercato target di 2 miliardi di euro.
+        <!-- Metrics and Goals Section -->
+        <div class="mb-24 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="700">
+            <h3 class="text-2xl font-bold mb-10 text-center text-dark">Metriche Chiave e Obiettivi</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Active Users Metric -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-primary hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons text-primary text-2xl">groups</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-dark mb-3">Utenti Attivi</h4>
+                    <div class="flex items-baseline mb-3">
+                        <span class="text-3xl font-bold text-primary mr-2">500+</span>
+                        <span class="text-gray-600">professionisti</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                        <div class="bg-primary h-2 rounded-full" style="width: 40%"></div>
+                    </div>
+                    <p class="text-gray-600">
+                        Obiettivo: 1200+ utenti entro fine anno
+                    </p>
+                </div>
+                
+                <!-- Revenue Metric -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-primary hover:-translate-y-1" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons text-primary text-2xl">payments</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-dark mb-3">Fatturato</h4>
+                    <div class="flex items-baseline mb-3">
+                        <span class="text-3xl font-bold text-primary mr-2">€150k</span>
+                        <span class="text-gray-600">primo anno</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                        <div class="bg-primary h-2 rounded-full" style="width: 30%"></div>
+                    </div>
+                    <p class="text-gray-600">
+                        Obiettivo: €500k entro il secondo anno
+                    </p>
+                </div>
+                
+                <!-- Partnerships Metric -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-primary hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons text-primary text-2xl">handshake</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-dark mb-3">Partnership</h4>
+                    <div class="flex items-baseline mb-3">
+                        <span class="text-3xl font-bold text-primary mr-2">8</span>
+                        <span class="text-gray-600">partnership attive</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                        <div class="bg-primary h-2 rounded-full" style="width: 50%"></div>
+                    </div>
+                    <p class="text-gray-600">
+                        Obiettivo: 15 partnership strategiche
+                    </p>
+                </div>
+                
+                <!-- Suppliers Metric -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-primary hover:-translate-y-1" data-aos="fade-up" data-aos-delay="250">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-4">
+                        <span class="material-icons text-primary text-2xl">inventory</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-dark mb-3">Fornitori</h4>
+                    <div class="flex items-baseline mb-3">
+                        <span class="text-3xl font-bold text-primary mr-2">120+</span>
+                        <span class="text-gray-600">negozi connessi</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                        <div class="bg-primary h-2 rounded-full" style="width: 35%"></div>
+                    </div>
+                    <p class="text-gray-600">
+                        Obiettivo: 300+ fornitori entro fine anno
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="mt-16 max-w-6xl mx-auto bg-light rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="700">
+            <div class="px-8 py-10 bg-primary border-b border-gray-200">
+                <h3 class="text-2xl font-bold text-center text-white">Pronto a Rivoluzionare il Design d'Interni?</h3>
+            </div>
+            
+            <div class="p-8 text-center">
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Unisciti alla comunità VisionXt e trasforma il tuo approccio alla ricerca e selezione di arredi. 
+                    Richiedi oggi una demo gratuita.
                 </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10">
-                <div class="bg-white bg-opacity-10 p-5 md:p-6 rounded-lg">
-                    <h4 class="text-xl font-bold mb-3">Necessità Finanziarie</h4>
-                    <p class="mb-2">Fase MVP + Lancio (6-9 mesi):</p>
-                    <ul class="space-y-2 list-inside mb-4">
-                        <li class="flex justify-between">
-                            <span>• Sviluppo AI e tecnologia</span>
-                            <span class="font-bold">€70.000</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>• Marketing e acquisizione clienti</span>
-                            <span class="font-bold">€30.000</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>• Team e operations</span>
-                            <span class="font-bold">€50.000</span>
-                        </li>
-                        <li class="flex justify-between font-bold mt-2">
-                            <span>Totale richiesto</span>
-                            <span>€150.000</span>
-                        </li>
-                    </ul>
-                    <p class="text-sm opacity-90 mt-4">*Beneficiamo già dei servizi dei nostri incubatori (CTE del Molise e Musa) che riducono i costi operativi e di sviluppo.</p>
-                </div>
-                
-                <div class="bg-white bg-opacity-10 p-5 md:p-6 rounded-lg">
-                    <h4 class="text-xl font-bold mb-3">Vantaggi per gli Investitori</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="material-icons mr-2 mt-1">trending_up</span>
-                            <div>
-                                <p class="font-medium">Mercato in rapida crescita</p>
-                                <p class="text-sm opacity-90">L'e-commerce di arredamento è cresciuto del +14% nel 2022, con CAGR stimato del +15% per i prossimi anni</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="material-icons mr-2 mt-1">star</span>
-                            <div>
-                                <p class="font-medium">Prima mover nel segmento locale-AI</p>
-                                <p class="text-sm opacity-90">Nessun competitor unisce riconoscimento visivo AI e focus sui fornitori locali</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="material-icons mr-2 mt-1">verified</span>
-                            <div>
-                                <p class="font-medium">PoC già funzionante e validato</p>
-                                <p class="text-sm opacity-90">Modelli di Computer Vision testati, con primi partner commerciali già acquisiti</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div id="contact" class="text-center">
-                <a href="mailto:l.rosati@visionxt.tech" class="bg-white text-primary py-3 px-8 rounded-full font-bold text-lg inline-flex items-center hover:bg-opacity-90 transition">
-                    <span class="material-icons mr-2">mail</span> Contattaci per Investire
+                <a href="#contact" class="btn-primary py-3 px-8 rounded-full font-medium text-center text-white shadow-md hover:shadow-lg transition-all inline-block">
+                    Contattaci Ora
                 </a>
+                <p class="text-gray-500 mt-4 text-sm">Nessun impegno o carta di credito richiesta</p>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Configurazione grafico ricavi
+    const ctxRicavi = document.getElementById('ricaviChart').getContext('2d');
+    if (ctxRicavi) {
+        new Chart(ctxRicavi, {
+            type: 'doughnut',
+            data: {
+                labels: ['Commissioni (50%)', 'Abbonamenti (30%)', 'Pubblicità (20%)'],
+                datasets: [{
+                    data: [50, 30, 20],
+                    backgroundColor: [
+                        '#FF7A3D',
+                        '#4ECDC4',
+                        '#F7B801'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 15,
+                            font: {
+                                size: 12,
+                                family: "'Poppins', sans-serif"
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+});
+</script>
+
+<style>
+/* Styles specifici per la sezione business */
+#business {
+    overflow-x: hidden;
+    min-height: 500px;
+    overflow-y: hidden;
+}
+
+/* Effetto sottile sulle card */
+#business .pain-point-card {
+    position: relative;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#business .pain-point-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary);
+}
+
+/* Styling per le metriche */
+#business .bg-gray-200 {
+    height: 8px;
+    border-radius: 4px;
+}
+
+#business .bg-primary {
+    border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    #business {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    
+    #business .grid > div {
+        margin-bottom: 1.5rem;
+    }
+    
+    #business .chart-container {
+        height: 220px;
+    }
+}
+</style>

@@ -1,160 +1,94 @@
 <!-- Hero Section -->
-<section class="hero-section relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-    <div id="particles-js" class="particles-container absolute top-0 left-0 w-full h-full"></div>
-    
-    <div class="container mx-auto px-4 md:px-6 py-8 md:py-16 relative z-10">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+<section id="hero" class="relative pt-28 pb-30 overflow-hidden bg-white">
+    <div class="container mx-auto px-8 md:px-16 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+            <!-- Content Column (testo a sinistra, ridotto in larghezza) -->
+            <div class="w-full lg:w-2/5 lg:pt-8" data-aos="fade-right" data-aos-duration="700">
+                <span class="inline-block text-xs font-medium text-primary mb-4">• Semplifica la 
+                    Ricerca di Prodotti •</span>
                 
-                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-                    <span class="text-dark">Dalla Visione alla Realtà:</span>
-                    <span style="background: linear-gradient(90deg, #FF7A3D 0%, #80CBC4 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"> Arreda con l'AI</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-dark max-w-lg">
+                    <span class="block">Dalla Visione</span>
+                    <span class="block">alla Realtà:</span>
+                    <span class="block text-primary">Arreda con l'AI</span>
                 </h1>
-                <div class="text-xs md:text-sm font-bold text-primary uppercase tracking-wider mb-2">carica, Scopri, Arreda: Design in un Click</div>
-                <p class="text-base md:text-lg text-gray-600 mb-4 md:mb-5">
-                    VisionXt trasforma il modo di arredare: carica una foto di un ambiente che ti ispira e la nostra AI identifica mobili e arredi simili disponibili presso fornitori locali in tempo reale.
+                
+                <p class="text-base md:text-lg text-gray-600 mb-10 max-w-lg">
+                    VisionXt trasforma il modo di arredare: carica una foto di un ambiente 
+                    che ti ispira e la nostra AI identifica arredi e finiture simili disponibili 
+                    presso fornitori locali.
                 </p>
-                <div class="bg-light-accent p-4 rounded-lg mb-6 md:mb-8">
-                    <p class="text-sm md:text-base font-medium text-dark">
-                        <span class="text-primary font-bold">✓</span> Dedica più tempo alla creatività e meno alla ricerca di prodotti
-                        <br><span class="text-primary font-bold">✓</span> E-commerce in crescita: +14% nel 2022 (3,9 miliardi €)
-                        <br><span class="text-primary font-bold">✓</span> Risparmia fino al 75% del tempo nella ricerca di arredi e fornitori
-                    </p>
-                </div>
-                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
-                    <a href="#solution" class="btn-primary py-2 md:py-3 px-6 md:px-8 rounded-full font-medium text-center shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
-                        Scopri Come Funziona
-                    </a>
-                    <a href="#contact" class="btn-secondary py-2 md:py-3 px-6 md:px-8 rounded-full font-medium text-center hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="300">
+                
+                <div class="flex flex-col sm:flex-row gap-5 mb-12">
+                    <a href="#solution" class="btn-primary py-3 px-8 rounded-full text-white text-center font-medium">
                         Richiedi una Demo
                     </a>
                 </div>
             </div>
-            <!-- Hero Image (implementazione statica senza animazioni) -->
-            <div class="md:w-1/2 hero-image-container" style="display: block !important; opacity: 1 !important; visibility: visible !important;">
-                <img id="hero-image" src="static/images/gif_landing.gif" alt="Riconoscimento arredi con AI" style="display: block !important; opacity: 1 !important; visibility: visible !important; width: 100%; height: auto;">
+            
+            <!-- Image Column (aumentato spazio e dimensione) -->
+            <div class="w-full lg:w-3/5 flex justify-end" data-aos="fade-left" data-aos-duration="700">
+                <div class="relative">
+                    <!-- Sfondo leggero (gradiente sottile) -->
+                    <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-light-accent/20 to-light/40"></div>
+                    
+                    <!-- Immagine principale -->
+                    <div class="relative pr-8 pb-8">
+                        <img 
+                            id="hero-image" 
+                            src="static/images/gif_landing.gif" 
+                            alt="Riconoscimento arredi con AI" 
+                            class="w-full max-w-2xl h-auto object-contain relative z-10"
+                            loading="eager"
+                        >
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="absolute bottom-4 md:bottom-10 left-1/2 transform -translate-x-1/2 scroll-down hidden md:block">
-            <span class="material-icons text-primary animate-bounce">arrow_downward</span>
         </div>
     </div>
 </section>
 
-<!-- Includi particles.js tramite CDN -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<!-- Configura e inizializza particles.js -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    particlesJS('particles-js', {
-        "particles": {
-            "number": {
-                "value": 80,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#FF7A3D"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 3,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#FF7A3D",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 4,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 6000,
-                    "rotateY": 6000
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    });
-});
-</script>
+<style>
+/* Hero section specific styles */
+#hero {
+    overflow-x: hidden;
+    background: white;
+}
+
+#hero h1 {
+    line-height: 1.1;
+}
+
+/* Hero image styling */
+#hero-image {
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #hero {
+        padding-top: 7rem;
+        padding-bottom: 4rem;
+    }
+    
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding-top: 6rem;
+        text-align: center;
+    }
+    
+    #hero .btn-primary {
+        margin: 0 auto;
+    }
+    
+    #hero .flex.items-center {
+        justify-content: center;
+    }
+}
+</style>

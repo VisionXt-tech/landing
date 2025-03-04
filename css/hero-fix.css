@@ -1,0 +1,95 @@
+/* Hero section optimizations */
+
+/* Clean hero image display */
+#hero-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+    transform: none !important;
+    animation: none !important;
+    mix-blend-mode: multiply; /* Helps with transparent background */
+}
+
+#hero-image.loaded {
+    opacity: 1;
+}
+
+/* Hero container styling */
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+}
+
+/* Section styling */
+#hero {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(248,249,250,1) 100%);
+    position: relative;
+    isolation: isolate;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    #hero {
+        padding-top: 5rem;
+    }
+    
+    .hero-image-wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+        min-height: auto;
+    }
+    
+    #hero-image {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .hero-image-wrapper {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Decorative elements */
+.hero-dot {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--primary);
+    opacity: 0.1;
+}
+
+.hero-dot-1 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    right: 5%;
+}
+
+.hero-dot-2 {
+    width: 50px;
+    height: 50px;
+    bottom: 15%;
+    left: 10%;
+}
+
+/* Animation for smoother appearance */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#hero-image {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}

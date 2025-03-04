@@ -71,14 +71,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .pain-point-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border-color: var(--primary);
-    border-width: 1px;
+    border-width: 3px;
     border-style: solid;
 }
 
@@ -658,4 +658,73 @@
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* Stile per le card della soluzione */
+.solution-card {
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Bordo più visibile */
+    transition: all 0.3s ease;
+    border-radius: 12px; /* Aggiunto bordo arrotondato */
+    padding: 1.5rem; /* Aggiunto padding interno */
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+/* Stile generico per le card */
+.generic-card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.generic-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+    border-width: 3px;
+    border-style: solid;
+}
+
+/* Stili per i dati di mercato */
+.market-data-section {
+    background-color: var(--light-accent);
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+}
+
+.market-data-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.market-data-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.market-data-value {
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.market-data-label {
+    color: var(--text-dark);
+    font-size: 1rem;
 }

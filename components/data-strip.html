@@ -1,0 +1,126 @@
+<!-- Data Strip Component with Logo Carousel -->
+<section class="py-10 bg-primary overflow-hidden">
+    <!-- Logo Carousel Section -->
+    <div class="logo-carousel-container">
+        <div class="logo-track">
+            <!-- Primo set di loghi -->
+            <div class="logo-slide">
+                <img src="static\logos\cropped-logo-fire.png" alt="Partner Logo 1" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\entopan-white-1.png" alt="Partner Logo 2" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\Group-1.png" alt="Partner Logo 3" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\Group-2.png" alt="Partner Logo 4" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\links.png" alt="Partner Logo 5" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\logo-colorato-sfondo-300x60.png" alt="Partner Logo 6" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\MUSA-White_Vettoriale-150x150.png" alt="Partner Logo 7" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\PNRR_int.psd.png" alt="Partner Logo 8" class="logo-img">
+            </div>
+
+            <!-- Duplicato per effetto loop infinito -->
+            <div class="logo-slide">
+                <img src="static\logos\cropped-logo-fire.png" alt="Partner Logo 1" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\entopan-white-1.png" alt="Partner Logo 2" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\Group-1.png" alt="Partner Logo 3" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\Group-2.png" alt="Partner Logo 4" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\links.png" alt="Partner Logo 5" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\logo-colorato-sfondo-300x60.png" alt="Partner Logo 6" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\MUSA-White_Vettoriale-150x150.png" alt="Partner Logo 7" class="logo-img">
+            </div>
+            <div class="logo-slide">
+                <img src="static\logos\PNRR_int.psd.png" alt="Partner Logo 8" class="logo-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Logo Carousel Styles */
+.logo-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.logo-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: calc(150px * 16); /* Larghezza di tutti i loghi inclusi i duplicati */
+}
+
+.logo-slide {
+    flex: 0 0 auto; /* Allow content to determine size */
+    width: auto; /* Adjust width based on content */
+    height: 50px; /* Fixed height for proportionality */
+    margin: 0 20px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the logo */
+    justify-content: center; /* Horizontally center the logo */
+}
+
+.logo-img {
+    max-width: 100%; /* Ensure logo fits within the slide */
+    max-height: 100%; /* Ensure logo fits within the slide */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    filter: brightness(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-150px * 8 - 40px * 8)); /* Larghezza dei primi 8 loghi con i margini */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-slide {
+        flex: 0 0 120px;
+        margin: 0 15px;
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-120px * 8 - 30px * 8));
+        }
+    }
+}
+</style>

@@ -2,570 +2,80 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#FFFFFF">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VisionXt - Rivoluzione nel Design d'Interni con l'IA</title>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts e Material Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
+    <!-- CSS Framework e Librerie -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Particles.js for background animation -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
-    <!-- AOS Animation Library -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/fix.css">
-    
-    <style>
-        /* Critical override - ensure it works immediately */
-        #market .bg-light p {
-            color: #2A2A2A !important;
-            font-weight: 500 !important;
-        }
-        
-        /* Styled checkmarks for the competitive advantages */
-        .advantage-checkmark {
-            color: #FF7A3D !important;
-            font-size: 20px !important;
-            min-width: 28px !important;
-            margin-right: 12px !important;
-            margin-top: 2px !important;
-        }
-
-        .advantages-section h4 {
-            color: #2A2A2A !important;
-            font-weight: 600 !important;
-            margin-bottom: 5px !important;
-        }
-
-        .advantages-section p {
-            color: #2A2A2A !important;
-            font-weight: normal !important;
-            line-height: 1.5 !important;
-        }
-        
-        .pain-point-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 24px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .pain-point-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .pain-point-icon {
-            color: var(--primary);
-            font-size: 36px;
-            margin-bottom: 16px;
-        }
-        
-        .adopter-profile {
-            background-color: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border-left: 4px solid var(--primary);
-        }
-        
-        .adopter-profile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .adopter-avatar {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background-color: var(--light-accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .revenue-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            height: 100%;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            position: relative !important; 
-            z-index: 10 !important;
-        }
-        
-        .metric-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            position: relative !important;
-            z-index: 10 !important;
-        }
-        
-        .metric-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .metric-icon {
-            font-size: 36px;
-            color: var(--primary);
-            margin-bottom: 16px;
-        }
-        
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-        
-        /* Floating animation for hero elements */
-        .floating {
-            animation: floating 4s ease-in-out infinite;
-        }
-
-        @keyframes floating {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-        
-        /* Sequence animation for staggered children */
-        .sequence-parent > * {
-            transition: all 0.5s ease;
-        }
-        
-        /* Ensure hero image is always visible */
-        #hero-image {
-            display: block !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-        
-        /* Style for tab interface */
-        .tab-button {
-            transition: all 0.3s ease;
-        }
-        
-        .tab-button.active {
-            background-color: var(--primary) !important;
-            color: white !important;
-        }
-        
-        .tab-pane {
-            display: block;
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-        
-        .tab-pane.hidden {
-            display: none;
-            opacity: 0;
-        }
-
-        /* FIX CRITICI PER BUSINESS SECTION */
-        #business h3 {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            position: relative !important;
-            z-index: 10 !important;
-        }
-
-        #business .grid {
-            display: grid !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
-
-        #business .bg-white p, 
-        #business .bg-light p,
-        #business .text-gray-600, 
-        #business .text-gray-700,
-        #business .text-sm {
-            color: #333333 !important;
-            font-weight: 400 !important;
-        }
-    </style>
+    <link rel="stylesheet" href="css/hero-fix.css">
 </head>
-<body>
-    <!-- Contenitore per caricamento dinamico -->
+<body class="bg-white">
+    <!-- Contenitori per caricamento dinamico -->
     <div id="header-container"></div>
     <div id="mobile-menu-container"></div>
     <div id="hero-container"></div>
+    <div id="data-strip1-container"></div>
     <div id="problem-container"></div>
+    <div id="data-strip2-container"></div>
     <div id="solution-container"></div>
+    <div id="data-strip3-container"></div>
     <div id="customers-container"></div>
+    <div id="data-strip4-container"></div>
     <div id="advantages-container"></div>
+    <div id="data-strip5-container"></div>
     <div id="business-container"></div>
     <div id="footer-container"></div>
     
-    <!-- Script per caricare dinamicamente i componenti -->
     <script>
         // Funzione per caricare un componente HTML 
         async function loadComponent(url, containerId) {
             try {
                 const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error(`Failed to load ${url}: ${response.status}`);
-                }
+                if (!response.ok) throw new Error(`Failed to load ${url}`);
                 const html = await response.text();
                 document.getElementById(containerId).innerHTML = html;
-                
-                // Fix per hero image se stiamo caricando hero.html
-                if (containerId === 'hero-container') {
-                    setTimeout(fixHeroImage, 100);
-                }
-                
-                // Fix per business section se stiamo caricando business.html
-                if (containerId === 'business-container') {
-                    setTimeout(fixBusinessSection, 100);
-                    setTimeout(fixBusinessSection, 500);
-                    setTimeout(fixBusinessSection, 1000);
-                }
-                
-                // Notifica che un componente è stato caricato
-                window.dispatchEvent(new CustomEvent('componentLoaded', {
-                    detail: {
-                        id: containerId,
-                        url: url
-                    }
-                }));
             } catch (error) {
                 console.error(`Error loading component ${url}:`, error);
-            }
-        }
-        
-        // Funzione per correggere la visualizzazione della sezione business
-        function fixBusinessSection() {
-            console.log("Fixing business section...");
-            
-            // Assicura visibilità per i contenitori principali
-            const businessContainer = document.getElementById('business-container');
-            if (businessContainer) {
-                businessContainer.style.display = 'block';
-                businessContainer.style.visibility = 'visible';
-                businessContainer.style.opacity = '1';
-            }
-            
-            // Flussi di Ricavo Multi-Canale
-            const revenueCards = document.querySelectorAll('#business .revenue-card');
-            if (revenueCards.length > 0) {
-                console.log("Found revenue cards:", revenueCards.length);
-                revenueCards.forEach((card, index) => {
-                    card.style.display = 'block';
-                    card.style.visibility = 'visible';
-                    card.style.opacity = '1';
-                    card.style.position = 'relative';
-                    card.style.zIndex = '10';
-                    
-                    // Rimuovi attributi AOS che potrebbero interferire
-                    card.removeAttribute('data-aos');
-                    card.removeAttribute('data-aos-delay');
-                    card.removeAttribute('data-aos-duration');
-                    
-                    // Assicura che tutti i contenuti all'interno della card siano visibili
-                    const elements = card.querySelectorAll('*');
-                    elements.forEach(el => {
-                        el.style.display = '';
-                        el.style.visibility = 'visible';
-                        el.style.opacity = '1';
-                        
-                        // Rimuovi attributi AOS che potrebbero interferire
-                        el.removeAttribute('data-aos');
-                        el.removeAttribute('data-aos-delay');
-                        el.removeAttribute('data-aos-duration');
-                    });
-                });
-            }
-            
-            // Metriche Chiave e Obiettivi
-            const metricCards = document.querySelectorAll('#business .metric-card');
-            if (metricCards.length > 0) {
-                console.log("Found metric cards:", metricCards.length);
-                metricCards.forEach((card, index) => {
-                    card.style.display = 'block';
-                    card.style.visibility = 'visible';
-                    card.style.opacity = '1';
-                    card.style.position = 'relative';
-                    card.style.zIndex = '10';
-                    
-                    // Rimuovi attributi AOS che potrebbero interferire
-                    card.removeAttribute('data-aos');
-                    card.removeAttribute('data-aos-delay');
-                    card.removeAttribute('data-aos-duration');
-                    
-                    // Assicura che tutti i contenuti all'interno della card siano visibili
-                    const elements = card.querySelectorAll('*');
-                    elements.forEach(el => {
-                        el.style.display = '';
-                        el.style.visibility = 'visible';
-                        el.style.opacity = '1';
-                        
-                        // Rimuovi attributi AOS che potrebbero interferire
-                        el.removeAttribute('data-aos');
-                        el.removeAttribute('data-aos-delay');
-                        el.removeAttribute('data-aos-duration');
-                    });
-                });
-            }
-            
-            // Titoli e contenitori di sezione
-            const businessSection = document.querySelector('#business');
-            if (businessSection) {
-                businessSection.style.overflow = 'visible';
-                
-                // Forza la visibilità di tutti i titoli
-                const titles = businessSection.querySelectorAll('h2, h3, h4');
-                titles.forEach(title => {
-                    title.style.display = 'block';
-                    title.style.visibility = 'visible';
-                    title.style.opacity = '1';
-                    title.style.position = 'relative';
-                    title.style.zIndex = '10';
-                    
-                    // Rimuovi attributi AOS che potrebbero interferire
-                    title.removeAttribute('data-aos');
-                    title.removeAttribute('data-aos-delay');
-                    title.removeAttribute('data-aos-duration');
-                });
-                
-                // Forza la visibilità di grid e container
-                const containers = businessSection.querySelectorAll('.container, .grid');
-                containers.forEach(container => {
-                    container.style.display = 'block';
-                    container.style.visibility = 'visible';
-                    container.style.opacity = '1';
-                    container.style.overflow = 'visible';
-                    container.style.position = 'relative';
-                    container.style.zIndex = '10';
-                });
-            }
-        }
-        
-        // Funzione specifica per assicurarsi che l'immagine dell'hero sia visibile
-        function fixHeroImage() {
-            const heroImage = document.getElementById('hero-image');
-            if (heroImage) {
-                heroImage.style.display = 'block';
-                heroImage.style.opacity = '1';
-                heroImage.style.visibility = 'visible';
-                console.log('Hero image fixed');
-                
-                // Riapplica il fix dopo un po' per assicurarsi che rimanga visibile
-                setTimeout(() => {
-                    heroImage.style.display = 'block';
-                    heroImage.style.opacity = '1';
-                    heroImage.style.visibility = 'visible';
-                }, 1000);
             }
         }
 
         // Carica tutti i componenti al caricamento della pagina
         document.addEventListener('DOMContentLoaded', async () => {
+            // Carica i componenti
             await loadComponent('components/header.html', 'header-container');
             await loadComponent('components/mobile-menu.html', 'mobile-menu-container');
             await loadComponent('components/hero.html', 'hero-container');
+            await loadComponent('components/data-strip.html', 'data-strip1-container');
             await loadComponent('components/problem.html', 'problem-container');
+            await loadComponent('components/data-strip2.html', 'data-strip2-container');
             await loadComponent('components/solution.html', 'solution-container');
+            await loadComponent('components/data-strip3.html', 'data-strip3-container');
             await loadComponent('components/customers.html', 'customers-container');
+            await loadComponent('components/data-strip4.html', 'data-strip4-container');
             await loadComponent('components/advantages.html', 'advantages-container');
+            await loadComponent('components/data-strip5.html', 'data-strip5-container');
             await loadComponent('components/business.html', 'business-container');
             await loadComponent('components/footer.html', 'footer-container');
             
-            // Inizializza particles.js dopo aver caricato i componenti
-            initializeParticles();
-            
-            // Inizializza AOS per le animazioni allo scroll
+            // Inizializza AOS per le animazioni
             AOS.init({
-                duration: 800,
-                easing: 'ease-out-cubic',
-                once: false,
-                mirror: false,
-                offset: 50,
-                disable: 'mobile'  // Disabilita su mobile per migliori prestazioni
-            });
-            
-            // Fix aggiuntivo per l'immagine dell'hero dopo l'inizializzazione di AOS
-            setTimeout(fixHeroImage, 500);
-            
-            // Fix aggiuntivo per la sezione business dopo l'inizializzazione di AOS
-            setTimeout(fixBusinessSection, 500);
-            setTimeout(fixBusinessSection, 1000);
-            setTimeout(fixBusinessSection, 2000);
-            
-            // Inizializza eventuali altri script
-            if (typeof initializeScripts === 'function') {
-                initializeScripts();
-            }
-            
-            // Gestione eventi di scroll per assicurarsi che l'immagine dell'hero rimanga visibile
-            window.addEventListener('scroll', function() {
-                if (window.scrollY < 500) {  // Solo quando siamo vicini all'hero section
-                    fixHeroImage();
-                }
-                
-                // Assicura la visibilità della sezione business durante lo scroll
-                fixBusinessSection();
+                duration: 700,
+                easing: 'ease-out',
+                once: true,
+                offset: 50
             });
         });
-        
-        // Funzione per inizializzare particles.js
-        function initializeParticles() {
-            if (typeof particlesJS !== 'undefined') {
-                particlesJS('particles-js', {
-                    "particles": {
-                        "number": {
-                            "value": 80,
-                            "density": {
-                                "enable": true,
-                                "value_area": 800
-                            }
-                        },
-                        "color": {
-                            "value": "#FF7A3D"
-                        },
-                        "shape": {
-                            "type": "circle",
-                            "stroke": {
-                                "width": 0,
-                                "color": "#000000"
-                            },
-                            "polygon": {
-                                "nb_sides": 5
-                            }
-                        },
-                        "opacity": {
-                            "value": 0.3,
-                            "random": true,
-                            "anim": {
-                                "enable": false,
-                                "speed": 1,
-                                "opacity_min": 0.1,
-                                "sync": false
-                            }
-                        },
-                        "size": {
-                            "value": 5,
-                            "random": true,
-                            "anim": {
-                                "enable": false,
-                                "speed": 40,
-                                "size_min": 0.1,
-                                "sync": false
-                            }
-                        },
-                        "line_linked": {
-                            "enable": true,
-                            "distance": 150,
-                            "color": "#FF7A3D",
-                            "opacity": 0.2,
-                            "width": 1
-                        },
-                        "move": {
-                            "enable": true,
-                            "speed": 2,
-                            "direction": "none",
-                            "random": false,
-                            "straight": false,
-                            "out_mode": "out",
-                            "bounce": false,
-                            "attract": {
-                                "enable": false,
-                                "rotateX": 600,
-                                "rotateY": 1200
-                            }
-                        }
-                    },
-                    "interactivity": {
-                        "detect_on": "canvas",
-                        "events": {
-                            "onhover": {
-                                "enable": true,
-                                "mode": "grab"
-                            },
-                            "onclick": {
-                                "enable": true,
-                                "mode": "push"
-                            },
-                            "resize": true
-                        },
-                        "modes": {
-                            "grab": {
-                                "distance": 140,
-                                "line_linked": {
-                                    "opacity": 0.8
-                                }
-                            },
-                            "bubble": {
-                                "distance": 400,
-                                "size": 40,
-                                "duration": 2,
-                                "opacity": 8,
-                                "speed": 3
-                            },
-                            "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
-                            },
-                            "push": {
-                                "particles_nb": 4
-                            },
-                            "remove": {
-                                "particles_nb": 2
-                            }
-                        }
-                    },
-                    "retina_detect": true
-                });
-                console.log('Particles.js initialized');
-            } else {
-                console.error('particles.js library not loaded');
-            }
-        }
     </script>
-    
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-    <script src="js/tabs.js"></script>
-    <script src="js/business-fix.js"></script>
+    <script src="js/counter-fix.js"></script>
 </body>
 </html>
