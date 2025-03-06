@@ -13,47 +13,30 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            <!-- Card 1 -->
-            <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
-                    <span class="material-icons text-primary text-2xl">public</span>
+            <!-- Colonna 1: Problema + Immagine + Statistica -->
+            <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="100">
+                <!-- Card problema -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">public</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-dark">Impatto Ambientale Elevato</h3>
+                    <p class="text-gray-600">
+                        L'e-commerce tradizionale privilegia grandi catene globali, 
+                        generando un'impronta di CO2 significativa.  
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold mb-4 text-dark">Impatto Ambientale Elevato</h3>
-                <p class="text-gray-600">
-                    L'e-commerce tradizionale privilegia grandi catene globali, 
-                    generando un'impronta di CO2 significativa.  
-                </p>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card" data-aos="fade-up" data-aos-delay="150">
-                <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
-                    <span class="material-icons text-primary text-2xl">schedule</span>
+                
+                <!-- Immagine con rapporto 4:3 -->
+                <div class="relative pb-[75%] overflow-hidden rounded-lg shadow-sm">
+                    <img 
+                        src="static\images\transport.webp" 
+                        alt="Impatto ambientale del trasporto" 
+                        class="absolute inset-0 w-full h-full object-cover"
+                    >
                 </div>
-                <h3 class="text-xl font-semibold mb-4 text-dark">Ricerca Prodotti Inefficiente</h3>
-                <p class="text-gray-600">
-                    La difficoltà nel confrontare offerte e prodotti frena il processo decisionale, sia per professionisti che per privati.
-                </p>
-            </div>
-            
-            <!-- Card 3 -->
-            <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
-                    <span class="material-icons text-primary text-2xl">storefront</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-4 text-dark">Scarsa Visibilità Online</h3>
-                <p class="text-gray-600">
-                    La maggior parte dei produttori artigianali e fornitori locali, pur offrendo qualità superiore,
-                    faticano a competere online
-                </p>
-            </div>
-            </div>
-        </div>
-        
-        <!-- Statistiche del mercato -->
-        <div class="mt-10 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="700">
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <!-- Statistica -->
                 <div class="text-center bg-white p-8 rounded-lg border border-black-100">
                     <div class="mb-3">
                         <span class="text-5xl font-bold text-primary counter-value" data-target="80">80</span>
@@ -61,7 +44,31 @@
                     <div class="text-lg font-medium text-gray-700 mb-2">%</div>
                     <p class="text-gray-600 text-sm">Dei Prodotti di Arredo acquistati Online percorre pù di 1000 km</p>
                 </div>
-
+            </div>
+            
+            <!-- Colonna 2: Problema + Immagine + Statistica -->
+            <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="150">
+                <!-- Card problema -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">schedule</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-dark">Ricerca Prodotti Inefficiente</h3>
+                    <p class="text-gray-600">
+                        La difficoltà nel confrontare offerte e prodotti frena il processo decisionale, sia per professionisti che per privati.
+                    </p>
+                </div>
+                
+                <!-- Immagine con rapporto 4:3 -->
+                <div class="relative pb-[75%] overflow-hidden rounded-lg shadow-sm">
+                    <img 
+                        src="static\images\people-looking.jpg" 
+                        alt="Ricerca prodotti inefficiente" 
+                        class="absolute inset-0 w-full h-full object-cover"
+                    >
+                </div>
+                
+                <!-- Statistica -->
                 <div class="text-center bg-white p-8 rounded-lg border border-black-100">
                     <div class="mb-3">
                         <span class="text-5xl font-bold text-primary counter-value" data-target="70">70</span>
@@ -69,7 +76,32 @@
                     <div class="text-lg font-medium text-gray-700 mb-2">%</div>
                     <p class="text-gray-600 text-sm">Perdita di Tempo per Ricerche su prodotti e Fornitori.</p>
                 </div>
+            </div>
+            
+            <!-- Colonna 3: Problema + Immagine + Statistica -->
+            <div class="flex flex-col gap-6" data-aos="fade-up" data-aos-delay="200">
+                <!-- Card problema -->
+                <div class="bg-white p-8 rounded-xl border border-gray-200 h-full transition-all hover:shadow-md pain-point-card">
+                    <div class="w-14 h-14 bg-light-accent rounded-full flex items-center justify-center mb-6">
+                        <span class="material-icons text-primary text-2xl">storefront</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-dark">Scarsa Visibilità Online</h3>
+                    <p class="text-gray-600">
+                        La maggior parte dei produttori artigianali e fornitori locali, pur offrendo qualità superiore,
+                        faticano a competere online
+                    </p>
+                </div>
                 
+                <!-- Immagine con rapporto 4:3 -->
+                <div class="relative pb-[75%] overflow-hidden rounded-lg shadow-sm">
+                    <img 
+                        src="static\images\small-local.jpg" 
+                        alt="Scarsa visibilità online" 
+                        class="absolute inset-0 w-full h-full object-cover"
+                    >
+                </div>
+                
+                <!-- Statistica -->
                 <div class="text-center bg-white p-8 rounded-lg border border-black-100">
                     <div class="mb-3">
                         <span class="text-5xl font-bold text-primary counter-value" data-target="85">85</span>
@@ -94,13 +126,13 @@
 }
 
 /* Effetto sottile sulle card */
-#problem .grid > div {
+#problem .pain-point-card {
     position: relative;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
-#problem .grid > div:hover {
+#problem .pain-point-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
 }
@@ -131,8 +163,8 @@
         padding-bottom: 6rem;
     }
     
-    #problem .grid > div {
-        padding: 2rem;
+    #problem .gap-6 {
+        gap: 1.5rem;
     }
 }
 </style>
