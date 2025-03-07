@@ -20,14 +20,57 @@
             <div class="flex flex-col md:flex-row md:items-start mb-16 md:mb-24 relative">
                 <!-- Left content -->
                 <div class="w-full md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
-                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm inline-block w-full solution-card" data-aos="fade-right" data-aos-duration="700">
+                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm inline-block w-full solution-card h-full" data-aos="fade-right" data-aos-duration="700">
                         <div class="flex justify-center md:justify-end mb-4">
                             <span class="material-icons text-4xl text-primary">upload_file</span>
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold mb-3 text-dark">Carica un'Immagine</h3>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 mb-6">
                             Inizia caricando un'immagine o un render di un ambiente che ti ispira
                         </p>
+                        
+                        <!-- Schema architettura - Parte 1 -->
+                        <div class="mt-6 architecture-diagram">
+                            <svg viewBox="0 0 450 350" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                                <!-- User icon -->
+                                <circle cx="225" cy="30" r="20" stroke="black" stroke-width="2" fill="white"/>
+                                <circle cx="225" cy="20" r="8" fill="black"/>
+                                <path d="M225 28 Q225 45 210 45 H240 Q225 45 225 28" fill="black"/>
+                                
+                                <!-- Arrow down -->
+                                <line x1="225" y1="50" x2="225" y2="70" stroke="black" stroke-width="2"/>
+                                <polygon points="225,75 220,65 230,65" fill="black"/>
+                                
+                                <!-- Frontend App -->
+                                <rect x="150" y="80" width="150" height="60" rx="20" ry="20" fill="#FF7A3D"/>
+                                <text x="225" y="120" font-family="Arial" font-size="18" fill="white" text-anchor="middle">Frontend App</text>
+                                
+                                <!-- Arrow down -->
+                                <line x1="225" y1="140" x2="225" y2="160" stroke="black" stroke-width="2"/>
+                                <polygon points="225,165 220,155 230,155" fill="black"/>
+                                
+                                <!-- Firebase Auth -->
+                                <rect x="150" y="170" width="150" height="50" rx="20" ry="20" fill="#F7B801"/>
+                                <text x="225" y="203" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Auth</text>
+                                
+                                <!-- Arrow to Image Upload -->
+                                <line x1="180" y1="220" x2="140" y2="250" stroke="black" stroke-width="2"/>
+                                <polygon points="135,255 140,245 145,255" fill="black"/>
+                                
+                                <!-- Arrow to Località -->
+                                <line x1="270" y1="220" x2="310" y2="250" stroke="black" stroke-width="2"/>
+                                <polygon points="315,255 310,245 305,255" fill="black"/>
+                                
+                                <!-- Image Upload -->
+                                <rect x="80" y="260" width="120" height="50" rx="20" ry="20" fill="#4ECDC4"/>
+                                <text x="140" y="292" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Image Upload</text>
+                                
+                                <!-- Località -->
+                                <rect x="250" y="260" width="120" height="50" rx="20" ry="20" fill="#4ECDC4"/>
+                                <text x="310" y="285" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Località</text>
+                                <text x="310" y="300" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Google Maps API</text>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 
@@ -45,7 +88,7 @@
                 
                 <!-- Right content -->
                 <div class="w-full md:w-1/2 md:pl-12">
-                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm solution-card" data-aos="fade-left" data-aos-duration="700">
+                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm solution-card h-full" data-aos="fade-left" data-aos-duration="700">
                         <h4 class="text-lg font-semibold mb-3 text-dark">Tecnologie Utilizzate</h4>
                         <ul class="space-y-2">
                             <li class="flex items-start text-gray-600">
@@ -61,6 +104,15 @@
                                 <span>Supporto per formati JPG, PNG</span>
                             </li>
                         </ul>
+                        
+                        <!-- Immagine di supporto (schermata UI o simile) -->
+                        <div class="mt-6 rounded-lg overflow-hidden shadow-md">
+                            <img 
+                                src="static/images/landing-image.png" 
+                                alt="Interfaccia di caricamento" 
+                                class="w-full h-auto object-cover transition-transform hover:scale-105"
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,16 +121,51 @@
             <div class="flex flex-col md:flex-row md:items-start mb-16 md:mb-24 relative">
                 <!-- Left content -->
                 <div class="w-full md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
-                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm inline-block w-full solution-card" data-aos="fade-right" data-aos-duration="700">
+                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm inline-block w-full solution-card h-full" data-aos="fade-right" data-aos-duration="700">
                         <div class="flex justify-center md:justify-end mb-4">
                             <span class="material-icons text-4xl text-primary">search</span>
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold mb-3 text-dark">Identifica Arredi e Finiture</h3>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 mb-6">
                             Il sistema riconosce automaticamente oggetti, 
                             stili, materiali e colori, estraendo le caratteristiche chiave 
                             di ogni elemento nell'immagine, compresi i rivestimenti e finiture superficiali
                         </p>
+                        
+                        <!-- Schema architettura - Parte 2 -->
+                        <div class="mt-6 architecture-diagram">
+                            <svg viewBox="0 0 450 320" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                                <!-- Computer Vision Ensemble -->
+                                <rect x="50" y="20" width="350" height="180" rx="10" ry="10" fill="#4ECDC4"/>
+                                <text x="225" y="50" font-family="Arial" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Computer Vision Ensamble</text>
+                                
+                                <!-- CV-1 -->
+                                <rect x="80" y="75" width="80" height="40" rx="15" ry="15" fill="white" stroke="#333" stroke-width="1"/>
+                                <text x="120" y="100" font-family="Arial" font-size="16" fill="black" text-anchor="middle">CV-1</text>
+                                
+                                <!-- CV-2 -->
+                                <rect x="185" y="75" width="80" height="40" rx="15" ry="15" fill="white" stroke="#333" stroke-width="1"/>
+                                <text x="225" y="100" font-family="Arial" font-size="16" fill="black" text-anchor="middle">CV-2</text>
+                                
+                                <!-- CV-3 -->
+                                <rect x="290" y="75" width="80" height="40" rx="15" ry="15" fill="white" stroke="#333" stroke-width="1"/>
+                                <text x="330" y="100" font-family="Arial" font-size="16" fill="black" text-anchor="middle">CV-3</text>
+                                
+                                <!-- RAG-1 -->
+                                <rect x="145" y="135" width="160" height="50" rx="15" ry="15" fill="white" stroke="#333" stroke-width="1"/>
+                                <text x="225" y="160" font-family="Arial" font-size="16" fill="black" text-anchor="middle">RAG-1</text>
+                                <text x="225" y="178" font-family="Arial" font-size="12" fill="black" text-anchor="middle">Classi arredi e finiture</text>
+                                
+                                <!-- Arrow down -->
+                                <line x1="225" y1="200" x2="225" y2="230" stroke="black" stroke-width="2"/>
+                                <polygon points="225,235 220,225 230,225" fill="black"/>
+                                
+                                <!-- LLM -->
+                                <rect x="125" y="240" width="200" height="60" rx="10" ry="10" fill="#FF7A3D"/>
+                                <text x="225" y="270" font-family="Arial" font-size="20" font-weight="bold" fill="white" text-anchor="middle">LLM</text>
+                                <text x="225" y="290" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Generazioni Query di Ricerca</text>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 
@@ -96,46 +183,105 @@
                 
                 <!-- Right content -->
                 <div class="w-full md:w-1/2 md:pl-12">
-                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm solution-card" data-aos="fade-left" data-aos-duration="700">
+                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm solution-card h-full" data-aos="fade-left" data-aos-duration="700">
                         <h4 class="text-lg font-semibold mb-3 text-dark">Vantaggi</h4>
                         <ul class="space-y-2">
-                                <li class="flex items-start text-gray-600">
-                                    <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">check_circle</span>
-                                    <span>Analisi estremamente accurata di stili e categorie</span>
-                                </li>
-                                <li class="flex items-start text-gray-600">
-                                    <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">check_circle</span>
-                                    <span>Identificazione di dettagli tecnici e specifiche peculiari</span>
-                                </li>
-                                <li class="flex items-start text-gray-600">
-                                    <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">check_circle</span>
-                                    <span>Ricerca intelligente con abbinamenti stilistici professionali</span>
-                                </li>
-                            </ul>
+                            <li class="flex items-start text-gray-600">
+                                <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">check_circle</span>
+                                <span>Analisi estremamente accurata di stili e categorie</span>
+                            </li>
+                            <li class="flex items-start text-gray-600">
+                                <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">check_circle</span>
+                                <span>Identificazione di dettagli tecnici e specifiche peculiari</span>
+                            </li>
+                            <li class="flex items-start text-gray-600">
+                                <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">check_circle</span>
+                                <span>Ricerca intelligente con abbinamenti stilistici professionali</span>
+                            </li>
+                        </ul>
+                        
+                        <!-- Immagine di supporto (esempio recognition) -->
+                        <div class="mt-6 rounded-lg overflow-hidden shadow-md">
+                            <img 
+                                src="static/images/ai-vision-technology.png" 
+                                alt="Tecnologia Computer Vision" 
+                                class="w-full h-auto object-cover transition-transform hover:scale-105"
+                            >
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Step 3 -->
-            <div class="flex flex-col md:flex-row md:items-start mb-16 relative">
+            <div class="flex flex-col md:flex-row md:items-start mb-16 md:mb-24 relative">
                 <!-- Left content -->
                 <div class="w-full md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
-                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm inline-block w-full solution-card" data-aos="fade-right" data-aos-duration="700">
+                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm inline-block w-full solution-card h-full" data-aos="fade-right" data-aos-duration="700">
                         <div class="flex justify-center md:justify-end mb-4">
                             <span class="material-icons text-4xl text-primary">location_on</span>
                         </div>
                         <h3 class="text-xl md:text-2xl font-bold mb-3 text-dark">Trova Prodotti Locali</h3>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 mb-6">
                             VisionXt connette fornitori ed utenti, 
                             privilegiando prodotti locali disponibili nel tuo 
                             territorio per ridurre tempi, costi e impatto CO2.
                         </p>
+                        
+                        <!-- Schema architettura - Parte 3 -->
+                        <div class="mt-6 architecture-diagram">
+                            <svg viewBox="0 0 450 320" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                                <!-- LLM output arrows -->
+                                <line x1="125" y1="20" x2="90" y2="50" stroke="black" stroke-width="2"/>
+                                <polygon points="85,55 90,45 95,55" fill="black"/>
+                                
+                                <line x1="325" y1="20" x2="360" y2="50" stroke="black" stroke-width="2"/>
+                                <polygon points="365,55 360,45 355,55" fill="black"/>
+                                
+                                <!-- Web Search 1 -->
+                                <rect x="20" y="60" width="140" height="60" rx="10" ry="10" fill="#F7B801"/>
+                                <text x="90" y="90" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Web Search-1</text>
+                                
+                                <!-- Web Search 2 -->
+                                <rect x="290" y="60" width="140" height="60" rx="10" ry="10" fill="#F7B801"/>
+                                <text x="360" y="90" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Web Search-2</text>
+                                
+                                <!-- Arrows down -->
+                                <line x1="90" y1="120" x2="90" y2="150" stroke="black" stroke-width="2"/>
+                                <polygon points="90,155 85,145 95,145" fill="black"/>
+                                
+                                <line x1="360" y1="120" x2="360" y2="150" stroke="black" stroke-width="2"/>
+                                <polygon points="360,155 355,145 365,145" fill="black"/>
+                                
+                                <!-- Data Storage -->
+                                <rect x="50" y="160" width="350" height="100" rx="10" ry="10" fill="#4ECDC4"/>
+                                <text x="225" y="185" font-family="Arial" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Data Storage</text>
+                                
+                                <!-- Firestore -->
+                                <rect x="80" y="195" width="90" height="35" rx="15" ry="15" fill="white" stroke="#333" stroke-width="1"/>
+                                <text x="125" y="218" font-family="Arial" font-size="14" fill="black" text-anchor="middle">Firestore</text>
+                                
+                                <!-- RAG-2 -->
+                                <rect x="280" y="195" width="90" height="35" rx="15" ry="15" fill="white" stroke="#333" stroke-width="1"/>
+                                <text x="325" y="218" font-family="Arial" font-size="14" fill="black" text-anchor="middle">RAG-2</text>
+                                
+                                <!-- Raffinamento Prodotti -->
+                                <rect x="145" y="230" width="160" height="25" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1"/>
+                                <text x="225" y="247" font-family="Arial" font-size="12" fill="black" text-anchor="middle">Raffinamento Prodotti</text>
+                                
+                                <!-- Arrow down -->
+                                <line x1="225" y1="260" x2="225" y2="270" stroke="black" stroke-width="2"/>
+                                <polygon points="225,275 220,265 230,265" fill="black"/>
+                                
+                                <!-- MARKETPLACE -->
+                                <rect x="125" y="280" width="200" height="40" rx="10" ry="10" fill="#FF7A3D"/>
+                                <text x="225" y="305" font-family="Arial" font-size="18" font-weight="bold" fill="white" text-anchor="middle">MARKETPLACE</text>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Timeline point -->
-                <div class="absolute left-1/2 top-8 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-md z-10 hidden md:flex">
+                <div class="absolute left-1/2 top-8 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-md z-10 md:flex">
                     <span class="font-bold text-xl">3</span>
                 </div>
                 
@@ -148,7 +294,7 @@
                 
                 <!-- Right content -->
                 <div class="w-full md:w-1/2 md:pl-12">
-                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm solution-card" data-aos="fade-left" data-aos-duration="700">
+                    <div class="p-6 md:p-8 bg-white rounded-lg shadow-sm solution-card h-full" data-aos="fade-left" data-aos-duration="700">
                         <h4 class="text-lg font-semibold mb-3 text-dark">Risultati</h4>
                         <ul class="space-y-2">
                             <li class="flex items-start text-gray-600">
@@ -164,6 +310,15 @@
                                 <span>Scoperta di alternative uniche e personalizzate</span>
                             </li>
                         </ul>
+                        
+                        <!-- Immagine di supporto (mappa o marketplace) -->
+                        <div class="mt-6 rounded-lg overflow-hidden shadow-md">
+                            <img 
+                                src="static/images/local-marketplace.png" 
+                                alt="Marketplace locale" 
+                                class="w-full h-auto object-cover transition-transform hover:scale-105"
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
@@ -226,6 +381,7 @@
 .solution-card {
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    height: 100%;
 }
 
 .solution-card:hover {
@@ -233,6 +389,42 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-color: var(--primary);
 }
+
+/* Stile per le immagini di supporto */
+.solution-card img {
+    transition: all 0.3s ease;
+}
+
+.solution-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Stile per i diagrammi di architettura */
+.architecture-diagram {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.architecture-diagram:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.architecture-diagram svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
 /* Hide timeline line and timeline points on mobile devices */
 @media (max-width: 768px) {
     .timeline-line,
@@ -240,10 +432,18 @@
         display: none;
     }
 }
+
 /* timeline line on mobile devices */
 @media (max-width: 768px) {
     .timeline-line {
         display: none;
+    }
+    
+    /* Center images on mobile */
+    .architecture-diagram {
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
     }
 }
 </style>
