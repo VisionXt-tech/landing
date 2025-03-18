@@ -371,39 +371,145 @@
             </div>
         </div>
         
-        <!-- Market data summary con dati aggiornati -->
-        <div class="mt-24 max-w-6xl mx-auto bg-light rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-duration="700">
-            <div class="px-8 py-10 bg-light-accent border-b border-gray-200">
-                <h3 class="text-2xl font-bold text-center text-dark">Dimensione del Mercato Target</h3>
+        <!-- Market data summary con grafico funnel -->
+        <div class="mt-24 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="700">
+            <div class="px-8 py-10 bg-light-accent rounded-t-xl border-b border-gray-200">
+                <h3 class="text-2xl font-bold text-center text-dark">Potenziale di Mercato</h3>
+                <p class="text-center text-gray-600 mt-2">Analisi del mercato target e opportunità di business</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
-                <div class="text-center bg-white p-6 rounded-lg border border-gray-200 market-data-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="mb-3">
-                        <span class="text-3xl font-bold text-primary">134 Mld €</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 bg-white rounded-b-xl shadow-lg">
+                <!-- Dati di mercato - Colonna sinistra -->
+                <div class="p-8 border-r border-gray-100">
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center p-4 bg-light rounded-lg hover:shadow-md transition-all">
+                            <div>
+                                <h4 class="font-semibold text-dark">Mercato Totale (TAM)</h4>
+                                <p class="text-sm text-gray-600">Industria arredamento globale</p>
+                            </div>
+                            <div class="text-2xl font-bold text-primary">134 Mld €</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center p-4 bg-light rounded-lg hover:shadow-md transition-all">
+                            <div>
+                                <h4 class="font-semibold text-dark">Mercato Disponibile (SAM)</h4>
+                                <p class="text-sm text-gray-600">Segmento arredamento italiano</p>
+                            </div>
+                            <div class="text-2xl font-bold text-primary">21 Mld €</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center p-4 bg-light rounded-lg hover:shadow-md transition-all">
+                            <div>
+                                <h4 class="font-semibold text-dark">Mercato Target (SOM)</h4>
+                                <p class="text-sm text-gray-600">Segmento arredo digitale</p>
+                            </div>
+                            <div class="text-2xl font-bold text-primary">2 Mld €</div>
+                        </div>
+                        
+                                                    <div class="flex justify-between items-center p-4 bg-primary/10 rounded-lg border border-primary/20 hover:shadow-md transition-all">
+                            <div>
+                                <h4 class="font-semibold text-dark">Obiettivo a 3 anni</h4>
+                                <p class="text-sm text-gray-600">Quota di mercato prevista</p>
+                            </div>
+                            <div class="text-2xl font-bold text-primary">2 Mln €</div>
+                        </div>
                     </div>
-                    <p class="text-gray-600 text-sm">Mercato target globale (TAM)</p>
+                    
+                    <div class="mt-8 p-4 bg-light-accent rounded-lg">
+                        <h4 class="font-semibold text-dark mb-2">Tendenze chiave</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start text-gray-600">
+                                <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">trending_up</span>
+                                <span>+14% crescita annua e-commerce arredamento</span>
+                            </li>
+                            <li class="flex items-start text-gray-600">
+                                <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">trending_up</span>
+                                <span>+32% ricerche online prima degli acquisti</span>
+                            </li>
+                            <li class="flex items-start text-gray-600">
+                                <span class="material-icons text-primary mr-2 mt-0.5 flex-shrink-0 text-sm">trending_up</span>
+                                <span>+27% preferenza per prodotti locali e sostenibili</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <div class="text-center bg-white p-6 rounded-lg border border-gray-200 market-data-card" data-aos="fade-up" data-aos-delay="150">
-                    <div class="mb-3">
-                        <span class="text-3xl font-bold text-primary">21 Mld €</span>
+                <!-- Grafico funnel - Colonna destra -->
+                <div class="p-8 flex flex-col justify-center">
+                    <div class="market-funnel-container relative h-96 mx-auto w-full max-w-md">
+                        <!-- Funnel shape con SVG -->
+                        <svg class="w-full h-full" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Livello 1: TAM -->
+                            <path d="M10,10 L290,10 L275,120 L25,120 Z" fill="#FFE6D9" stroke="#FF7A3D" stroke-width="2" class="funnel-segment">
+                                <title>Mercato Totale (TAM): 134 Mld €</title>
+                            </path>
+                            
+                            <!-- Livello 2: SAM -->
+                            <path d="M25,120 L275,120 L250,230 L50,230 Z" fill="#FFEFE6" stroke="#FF7A3D" stroke-width="2" class="funnel-segment">
+                                <title>Mercato Disponibile (SAM): 21 Mld €</title>
+                            </path>
+                            
+                            <!-- Livello 3: SOM -->
+                            <path d="M50,230 L250,230 L225,340 L75,340 Z" fill="#FFD9C6" stroke="#FF7A3D" stroke-width="2" class="funnel-segment">
+                                <title>Mercato Target (SOM): 2 Mld €</title>
+                            </path>
+                            
+                            <!-- Livello 4: Obiettivo -->
+                            <path d="M75,340 L225,340 L200,390 L100,390 Z" fill="#FF7A3D" stroke="#FF7A3D" stroke-width="2" class="funnel-segment">
+                                <title>Obiettivo a 3 anni: 2 Mln €</title>
+                            </path>
+                            
+                            <!-- Etichette interne al grafico -->
+                            <text x="150" y="75" text-anchor="middle" fill="#2A2A2A" font-weight="bold" font-size="14">TAM: 134 Mld €</text>
+                            <text x="150" y="180" text-anchor="middle" fill="#2A2A2A" font-weight="bold" font-size="14">SAM: 21 Mld €</text>
+                            <text x="150" y="290" text-anchor="middle" fill="#2A2A2A" font-weight="bold" font-size="14">SOM: 2 Mld €</text>
+                            <text x="150" y="370" text-anchor="middle" fill="#FFFFFF" font-weight="bold" font-size="14">Obiettivo: 2 Mln €</text>
+                        </svg>
+                        
+                        <!-- Etichette laterali riposizionate -->
+                        <div class="absolute top-0 -right-12 h-full flex flex-col justify-between py-4">
+                            <div class="funnel-label-right">
+                                <div class="bg-light-accent px-3 py-1 rounded-full text-xs font-medium text-primary shadow-sm">
+                                    Mercato Totale
+                                </div>
+                            </div>
+                            <div class="funnel-label-right">
+                                <div class="bg-light-accent px-3 py-1 rounded-full text-xs font-medium text-primary shadow-sm">
+                                    Mercato Italia
+                                </div>
+                            </div>
+                            <div class="funnel-label-right">
+                                <div class="bg-light-accent px-3 py-1 rounded-full text-xs font-medium text-primary shadow-sm">
+                                    Segmento Digital
+                                </div>
+                            </div>
+                            <div class="funnel-label-right">
+                                <div class="bg-primary px-3 py-1 rounded-full text-xs font-medium text-white shadow-sm">
+                                    Obiettivo VisionXt
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-gray-600 text-sm">Valore arredamento italiano annuo</p>
-                </div>
-                
-                <div class="text-center bg-white p-6 rounded-lg border border-gray-200 market-data-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="mb-3">
-                        <span class="text-3xl font-bold text-primary">2 Mld €</span>
+                    
+                    <!-- Legenda indicatori -->
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-sm bg-primary mr-2"></div>
+                            <span class="text-sm text-gray-600">Obiettivo a 3 anni</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-sm bg-FFD9C6 border border-primary mr-2"></div>
+                            <span class="text-sm text-gray-600">Mercato Target</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-sm bg-FFEFE6 border border-primary mr-2"></div>
+                            <span class="text-sm text-gray-600">Mercato Italia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 rounded-sm bg-FFE6D9 border border-primary mr-2"></div>
+                            <span class="text-sm text-gray-600">Mercato Globale</span>
+                        </div>
                     </div>
-                    <p class="text-gray-600 text-sm">Segmento di mercato target (SAM)</p>
-                </div>
-                
-                <div class="text-center bg-white p-6 rounded-lg border border-gray-200 market-data-card" data-aos="fade-up" data-aos-delay="250">
-                    <div class="mb-3">
-                        <span class="text-3xl font-bold text-primary">1%</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">Quota SAM prevista entro 3 anni</p>
                 </div>
             </div>
         </div>
@@ -490,6 +596,38 @@
     border-color: var(--primary);
 }
 
+/* Stili per il funnel di mercato */
+.market-funnel-container {
+    position: relative;
+}
+
+.funnel-segment {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.funnel-segment:hover {
+    filter: brightness(1.05);
+    transform: translateY(-2px);
+}
+
+.funnel-label-right {
+    padding: 4px 0;
+}
+
+/* Correggi i colori per la legenda */
+.bg-FFD9C6 {
+    background-color: #FFD9C6;
+}
+
+.bg-FFEFE6 {
+    background-color: #FFEFE6;
+}
+
+.bg-FFE6D9 {
+    background-color: #FFE6D9;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .tab-label {
@@ -504,6 +642,10 @@
     #customers {
         padding-top: 6rem;
         padding-bottom: 6rem;
+    }
+    
+    .market-funnel-container {
+        height: 280px;
     }
 }
 </style>
